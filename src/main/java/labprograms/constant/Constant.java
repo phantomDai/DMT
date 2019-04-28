@@ -13,7 +13,7 @@ public class Constant {
     /**
      * this is the number of generating test cases
      */
-    public static final int number = 1000;
+    public static final int number = 10000;
 
     public static final String acmssource = "labprograms.ACMS.sourceCode.AirlinesBaggageBillingService";
 

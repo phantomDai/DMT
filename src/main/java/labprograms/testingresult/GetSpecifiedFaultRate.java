@@ -48,6 +48,6 @@ public class GetSpecifiedFaultRate {
 
     public static void main(String[] args) {
         GetSpecifiedFaultRate getSpecifiedFaultRate = new GetSpecifiedFaultRate();
-        getSpecifiedFaultRate.getMutants(0.1, "CUBS");
+        getSpecifiedFaultRate.getMutants(0.15, "MOS");
     }
 }

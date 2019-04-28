@@ -52,6 +52,9 @@ public class GenerateScripts {
         stringBuffer.append("import java.util.ArrayList;\n");
         stringBuffer.append("import java.util.Random;\n");
         stringBuffer.append("import labprograms.constant.Constant;\n");
+        if (objectName.equals("MOS")){
+            stringBuffer.append("import labprograms.MOS.sourceCode.MSR;\n");
+        }
 
         stringBuffer.append("public class " + mutantName + "Test extends TestCase{\n");
         if (objectName.equals("ACMS")){
@@ -104,6 +107,19 @@ public class GenerateScripts {
             stringBuffer.append("\t\t\tdouble mutantResult = mutant.calculateReimbursementAmount(tc.getStafflevel(), tc.getActualmonthlymileage(), tc.getMonthlysalesamount(), tc.getAirfareamount(), tc.getOtherexpensesamount());\n");
             stringBuffer.append("\t\t\tif (sourceResult == mutantResult){\n\t\t\t\tcontinue;\n\t\t\t}else {\n\t\t\t\tcount++;\n" +
                     "\t\t\t}\n\t\t}\n\t\twriteTestingResult.write(\"ERS\", mutantName,\" \",String.valueOf(count));\n\t}\n");
+        }else {
+            stringBuffer.append("\t\tfor (TestCase4MOS tc : testcases) {\n" +
+                    "\t\t\t MSR sourceResult = source.generateMSR(tc.getAircraftmodel(), tc.getChangeinthenumberofcrewmembers(), tc.getNewnumberofcrewmembers(), tc.getChangeinthenumberofpilots(), tc.getNewnumberofpilots(), " +
+                    "tc.getNumberofchildpassengers(), tc.getNumberofrequestedbundlesofflowers());\n" +
+                    "\t\t\tlabprograms.MOS.mutants." + mutantName + ".MealOrderingSystem mutant = new labprograms.MOS.mutants." + mutantName + ".MealOrderingSystem();\n" +
+                    "\t\t\tMSR mutantResult = mutant.generateMSR(tc.getAircraftmodel(), tc.getChangeinthenumberofcrewmembers(), tc.getNewnumberofcrewmembers(), tc.getChangeinthenumberofpilots(), tc.getNewnumberofpilots(), tc.getNumberofchildpassengers(), tc.getNumberofrequestedbundlesofflowers());\n" +
+                    "\t\t\tif (sourceResult.numberOfBundlesOfFlowers == mutantResult.numberOfBundlesOfFlowers &&" +
+                    "sourceResult.numberOfBusinessClassMeals == mutantResult.numberOfBusinessClassMeals &&" +
+                    "sourceResult.numberOfChildMeals == mutantResult.numberOfChildMeals &&" +
+                    "sourceResult.numberOfEconomicClassMeals == mutantResult.numberOfEconomicClassMeals &&" +
+                    "sourceResult.numberOfFirstClassMeals == mutantResult.numberOfFirstClassMeals &&" +
+                    "sourceResult.numberOfMealsForCrewMembers == mutantResult.numberOfMealsForCrewMembers &&" +
+                    "sourceResult.numberOfMealsForPilots == mutantResult.numberOfMealsForPilots){\n\t\t\t\tcontinue;\n\t\t\t}else {\n\t\t\t\tcount++;\n\t\t\t}\n\t\t}\n\t\twriteTestingResult.write(\"MOS\", mutantName,\" \",String.valueOf(count));\n\t}\n");
         }
 
         stringBuffer.append("\tprivate void createTestCases(){\n\t\tConstant constant = new Constant();\n\t\tRandom random = new Random(0);\n");
@@ -123,6 +139,33 @@ public class GenerateScripts {
                     "\t\t\tint talkTime = random.nextInt(4000);\n\t\t\tint flow = random.nextInt(4000);\n\t\t\tTestCase4CUBS tc = new TestCase4CUBS(planType,planFee,talkTime,flow);\n" +
                     "\t\t\ttestcases.add(tc);\n\t\t}\n\t}\n}");
         } else if (objectName.equals("ERS")){
+            stringBuffer.append("\t\tString[] levels = {\"seniormanager\", \"manager\", \"supervisor\"};\n" +
+                    "\t\tfor (int i = 0; i < constant.number; i++) {\n" +
+                    "\t\t\tString stafflevel = levels[random.nextInt(3)];\n" +
+                    "\t\t\tdouble actualmonthlymileage = random.nextDouble() * 8000;\n" +
+                    "\t\t\tdouble monthlysalesamount = random.nextDouble() * 150000;\n" +
+                    "\t\t\tdouble airfareamount = random.nextDouble() * 10000;\n" +
+                    "\t\t\tdouble otherexpensesamount = random.nextDouble() * 10000;\n" +
+                    "\t\t\tTestCase4ERS tc = new TestCase4ERS(stafflevel, actualmonthlymileage,\n" +
+                    "                    monthlysalesamount,airfareamount, otherexpensesamount);\n" +
+                    "\t\t\ttestcases.add(tc);\n\t\t}\n" +
+                    "\t}\n}");
+        } else {
+            stringBuffer.append("\t\tString[] models = {\"747200\", \"747300\", \"747400\", \"000200\", \"000300\"};\n" +
+                    "\t\tString[] changenumbers = {\"y\", \"n\"};\n" +
+                    "\t\tString[] changpilots = {\"y\", \"n\"};\n" +
+                    "\t\tfor (int i = 0; i < constant.number; i++) {\n" +
+                    "\t\t\tString aircraftmodel = models[random.nextInt(4)];\n" +
+                    "\t\t\tString changeinthenumberofcrewmembers = changenumbers[random.nextInt(2)];\n" +
+                    "\t\t\tint newnumberofcrewmembers = random.nextInt(20);\n" +
+                    "\t\t\tString changeinthenumberofpilots = changpilots[random.nextInt(2)];\n" +
+                    "\t\t\tint newnumberofpilots = random.nextInt(5);\n" +
+                    "\t\t\tint numberofchildpassengers = random.nextInt(15);\n" +
+                    "\t\t\tint numberofrequestedbundlesofflowers = random.nextInt(500);\n" +
+                    "\t\t\tTestCase4MOS tc = new TestCase4MOS(aircraftmodel, changeinthenumberofcrewmembers, newnumberofcrewmembers,\n" +
+                    "                    changeinthenumberofpilots, newnumberofpilots, numberofchildpassengers, numberofrequestedbundlesofflowers);\n" +
+                    "\t\t\ttestcases.add(tc);\n\t\t}\n" +
+                    "\t}\n}");
 
         }
         return stringBuffer.toString();
@@ -183,9 +226,9 @@ public class GenerateScripts {
         }
     }
     public static void main(String[] args) {
-        GenerateScripts generateScripts = new GenerateScripts("ERS");
-//        generateScripts.generateScripts();
-        generateScripts.generateTestAll();
+        GenerateScripts generateScripts = new GenerateScripts("MOS");
+        generateScripts.generateScripts();
+//        generateScripts.generateTestAll();
 
     }
 

@@ -1,0 +1,1130 @@
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3a,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5a};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4b,*};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5a};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3c,I-4a,*};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4b,I-5b};The output will increase
+{I-1c,*,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4b,I-5b};The output will increase
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3a,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3b,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4a,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3a,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3a,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3b,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3c,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3b,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3c,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3c,I-4b,*};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5a};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4a,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1a,I-2b,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1b,I-2a,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1a,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2b,I-3d,I-4a,I-5a};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3a,I-4b,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3b,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3c,I-4a,*};The output will decrease
+{I-1c,*,I-3d,I-4b,I-5b};{I-1b,I-2c,I-3d,I-4a,I-5a};The output will decrease
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1a,I-2b,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1a,I-2b,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3a,I-4b,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1b,I-2a,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4a,*};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1b,I-2a,I-3d,I-4a,I-5a};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3a,I-4b,*};The output will not change
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1c,*,I-3a,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3b,I-4a,*};The output will not change
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1c,*,I-3a,I-4b,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3b,I-4b,*};The output will not change
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1c,*,I-3b,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3c,I-4a,*};The output will not change
+{I-1c,*,I-3b,I-4b,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
+{I-1c,*,I-3c,I-4a,*};{I-1c,*,I-3d,I-4a,I-5a};The output will not change
