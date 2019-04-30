@@ -11,10 +11,58 @@ import lombok.ToString;
  * @date 2019/04/17
  */
 
-@Setter
-@Getter
-@ToString
 public class TestCase4ACMS {
+    public int getAirClass() {
+        return airClass;
+    }
+
+    public void setAirClass(int airClass) {
+        this.airClass = airClass;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
+
+    public boolean isStudent() {
+        return isStudent;
+    }
+
+    public void setStudent(boolean student) {
+        isStudent = student;
+    }
+
+    public double getLuggage() {
+        return luggage;
+    }
+
+    public void setLuggage(double luggage) {
+        this.luggage = luggage;
+    }
+
+    public double getEconomicfee() {
+        return economicfee;
+    }
+
+    public void setEconomicfee(double economicfee) {
+        this.economicfee = economicfee;
+    }
+
+    @Override
+    public String toString(){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("airClass =" + String.valueOf(getAirClass()) + " ");
+        stringBuffer.append("area =" + String.valueOf(getArea()) + " ");
+        stringBuffer.append("luggage =" + String.valueOf(luggage) + " ");
+        stringBuffer.append("economicfee =" + String.valueOf(economicfee) + " ");
+
+        return stringBuffer.toString();
+    }
+
     private int airClass;
     private int area;
     private boolean isStudent;

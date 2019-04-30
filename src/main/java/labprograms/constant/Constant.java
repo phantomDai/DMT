@@ -51,4 +51,9 @@ public class Constant {
 
     public static final String resultPath = System.getProperty("user.dir") + separator + "result";
 
+    public static final String killedmutantinfo = System.getProperty("user.dir") +
+            separator + "src" + separator + "main" + separator + "java"
+            + separator + "labprograms" + separator + "gethardkilledmutants";
+
+
 }

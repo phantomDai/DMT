@@ -31,7 +31,7 @@ public class RecordLog {
      * @param sourceTestCase the source test case
      * @param followUpTestCase the follow-up test case
      */
-    public static void recordLog(String objectName, int seed,
+    public static void recordLog(String objectName, int seed, int index,
                                  double sourceResult, double followResult,
                                  String MR, Object sourceTestCase,
                                  Object followUpTestCase, String mutantName){
@@ -51,7 +51,8 @@ public class RecordLog {
 //            TestCase4MOS followtc = (TestCase4MOS) followUpTestCase;
 //        }
 
-        String content = "第" + String.valueOf(seed) + "次实验；" + mutantName + "被杀死；" +
+        String content = "第" + String.valueOf(seed) + "次实验；的第" +String.valueOf(index) + "个测试用例；"
+                + mutantName + "被杀死；" +
                 "原始测试用例为：" + sourceTestCase.toString() + "；衍生测试用例为：" +
                 followUpTestCase.toString() + "；它们的结果分别为：" + String.valueOf(sourceResult) +
                 "和" + String.valueOf(followResult) + "；违反了MR:" + MR;

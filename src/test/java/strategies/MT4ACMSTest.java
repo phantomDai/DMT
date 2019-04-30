@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * describe:
@@ -25,7 +27,7 @@ import java.util.Random;
  * @author phantom
  * @date 2019/04/29
  */
-public class MT4ACMS {
+public class MT4ACMSTest {
 
     private Random random;
 
@@ -67,10 +69,24 @@ public class MT4ACMS {
 
         // the number of repeating testing are 50
         for (int i = 0; i < Constant.repeatNumber; i++) {
+            System.out.println("第" + String.valueOf(i + 1) + "次重复实验");
 
             random4SelectTestCase = new Random(i);
             MutantsSet mutantsSet = new MutantsSet("ACMS");
-            Map<String, Mutant> mutantMap = mutantsSet.getMutants();
+            Map<String, Mutant> mutants = mutantsSet.getMutants();
+
+            Map<String, Mutant> mutantMap = new ConcurrentHashMap<String, Mutant>();
+
+            for (Map.Entry<String, Mutant> entry : mutants.entrySet()){
+                mutantMap.put(entry.getKey(),entry.getValue());
+            }
+
+            List<Integer> indexArray = new ArrayList<>();
+
+            for (int j = 0; j < Constant.number; j++) {
+                indexArray.add(random4SelectTestCase.nextInt(735) + 1);
+            }
+
 
             // the F-measure
             int Fmeasure = 0;
@@ -95,10 +111,12 @@ public class MT4ACMS {
             long allExecutingTime = 0;
 
             for (int j = 0; j < Constant.number; j++) { //测试用例的上限为10000
+                System.out.println("第" + String.valueOf(j + 1) + "个测试用例");
+
                 //select a test case
                 long startSelectTestCase = System.currentTimeMillis();
                 //对应与ACMS文件的行号（行号是从1开始）
-                int testframeAndMrIndex = random4SelectTestCase.nextInt(735) + 1;
+                int testframeAndMrIndex = indexArray.get(j);
                 // the counter add 1
                 counter++;
 
@@ -117,7 +135,10 @@ public class MT4ACMS {
                 //generate source test case and follow-up test case
                 long startGenerateTestCase = System.currentTimeMillis();
                 TestCase4ACMS sourceTestCase = generateTestCase(sourceTestFrame);
+
+                System.out.println("原始测试用例：" + sourceTestCase.toString());
                 TestCase4ACMS followUpTestCase = generateTestCase(followUpTestFrame);
+                System.out.println("衍生测试用例：" + followUpTestCase.toString());
                 long endGenerateTestCase = System.currentTimeMillis();
                 if (mutantMap.size() == 2){
                     firstGeneratingTime += (endGenerateTestCase - startGenerateTestCase);
@@ -176,7 +197,7 @@ public class MT4ACMS {
                         if (mutantMap.size() == 1){
                             Tmeasure = counter;
                         }
-                        RecordLog.recordLog("ACMS", i,sourceResult,followUpResult,MR,
+                        RecordLog.recordLog("ACMS", i,j, sourceResult,followUpResult,MR,
                                 sourceTestCase,followUpTestCase,entry.getKey());
                         mutantMap.remove(entry.getKey());
                     }
@@ -189,7 +210,7 @@ public class MT4ACMS {
                             Tmeasure = counter;
                         }
 
-                        RecordLog.recordLog("ACMS", i, sourceResult, followUpResult,MR,
+                        RecordLog.recordLog("ACMS", i, j, sourceResult, followUpResult,MR,
                                 sourceTestCase,followUpTestCase,entry.getKey());
                         mutantMap.remove(entry.getKey());
                     }
@@ -198,6 +219,10 @@ public class MT4ACMS {
                     break;
                 }
             }
+            FmeasureArray.add(Fmeasure);
+            TmeasureArray.add(Tmeasure);
+
+
             //add each time to array
             firstSelectTestCaseArray.add(firstSelectingTime);
             firstgenerateTestCaseArray.add(firstGeneratingTime);
@@ -305,16 +330,16 @@ public class MT4ACMS {
 
         switch (choices[3]){
             case "I-4a":
-                int temp = random.nextInt(80);
+                int temp = new Random().nextInt(80);
                 while(temp > benchmark){
-                    temp = random.nextInt(80);
+                    temp = new Random().nextInt(80);
                 }
                 luggage = temp;
                 break;
             case "I-4b":
-                int tempb = random.nextInt(80);
+                int tempb = new Random().nextInt(80);
                 while(tempb <= benchmark){
-                    temp = random.nextInt(80);
+                    tempb = new Random().nextInt(80);
                 }
                 luggage = tempb;
                 break;
@@ -325,7 +350,8 @@ public class MT4ACMS {
                 economicfee = 0;
                 break;
             case "I-5b":
-                economicfee =random.nextDouble() * 3000;
+                economicfee = new Random().nextDouble() * 3000;
+                break;
         }
         TestCase4ACMS tc = new TestCase4ACMS(airClass,area,isStudent,luggage,economicfee);
         return tc;
@@ -346,7 +372,6 @@ public class MT4ACMS {
         return result;
     }
 
-
     private double getAveragemeasure(List<Integer> time){
         int temp = 0;
         for(long t : time){
@@ -355,6 +380,4 @@ public class MT4ACMS {
         double result = temp / time.size();
         return result;
     }
-
-
 }
