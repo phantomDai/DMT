@@ -2,9 +2,12 @@ package labprograms.mutants;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static java.io.File.separator;
@@ -45,7 +48,7 @@ public class MutantsSet {
         File dir = new File(this.dir);
         String[] mutantNames = dir.list();
         for (String mutantName : mutantNames){
-            String fullName = mutants_dir + mutantName + "."+  map.get(objectName);
+            String fullName = mutants_dir + mutantName + "."+  map.get(objectName).toString();
             Mutant mutant = new Mutant(fullName);
             mutants.put(mutantName, mutant);
         }
@@ -57,4 +60,42 @@ public class MutantsSet {
         this.map.put("ERS", "ExpenseReimbursementSystem");
         this.map.put("MOS", "MealOrderingSystem");
     }
+
+    public static void main(String[] args) {
+        MutantsSet mutantsSet = new MutantsSet("ACMS");
+        System.out.println(mutantsSet.getMutants().get("SDL_8").getFullName());
+    }
+
+//    private static final String PARENT_DIR = "labprograms.";
+//    private String objectName;
+//
+//    private String[] classNames;
+//
+//    @Getter
+//    private List<String> mutantSet;
+//
+//    public MutantsSet(String objectName){
+//        this.objectName = objectName;
+//        mutantSet = new ArrayList<>();
+//        classNames = new String[] {"AirlinesBaggageBillingService", "BillCalculation", "ExpenseReimbursementSystem",
+//                "MealOrderingSystem"};
+//        initialize();
+//    }
+//
+//    private void initialize(){
+//        String dir = System.getProperty("user.dir") + separator + "src" + separator + "main" +
+//                separator + "java" + separator + "labprograms";
+//        String mutantDir = dir + separator + objectName + separator + "mutants";
+//
+//        String[] mutantnames = new File(mutantDir).list();
+//
+//        for (int i = 0; i < mutantnames.length; i++) {
+//            String fullName = PARENT_DIR + objectName + ".mutants." + mutantnames[i] +
+//        }
+//
+//    }
+
+
+
+
 }

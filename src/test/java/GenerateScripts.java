@@ -128,7 +128,7 @@ public class GenerateScripts {
             stringBuffer.append("\t\tBoolean[] ISSTUDENT = {true, false};\n\t\t\tfor (int i = 0; i < constant.number; i++) {\n"
             + "\t\t\tboolean isStudent = ISSTUDENT[random.nextInt(2)];\n\t\t\tint airClass = 0;\n\t\t\tif (isStudent){\n\t\t\t\tairClass = 2;\n" +
                     "\t\t\t}else {\n\t\t\t\tairClass = random.nextInt(4);\n\t\t\t}\n\t\t\tint area = random.nextInt(2);\n" +
-                    "\t\t\tdouble luggage = random.nextDouble() * 80;\n\t\t\tdouble economicfee = random.nextDouble() * 3000 + 500;\n" +
+                    "\t\t\tdouble luggage = random.nextDouble() * 80;\n\t\t\tdouble economicfee = random.nextDouble() * 3000;\n" +
                     "\t\t\tTestCase4ACMS tc = new TestCase4ACMS(airClass, area, isStudent, luggage, economicfee);\n" +
                     "\t\t\ttestcases.add(tc);\n\t\t}\n\t}\n}" );
         } else if (objectName.equals("CUBS")){
@@ -227,8 +227,8 @@ public class GenerateScripts {
     }
     public static void main(String[] args) {
         GenerateScripts generateScripts = new GenerateScripts("MOS");
-        generateScripts.generateScripts();
-//        generateScripts.generateTestAll();
+//        generateScripts.generateScripts();
+        generateScripts.generateTestAll();
 
     }
 

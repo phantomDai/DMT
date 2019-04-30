@@ -57,6 +57,8 @@ public class ParseXML {
         //get "pairsfromdiffgroups" node
         Element pairsfromdiffgroupsNode = root.element("pairsfromdiffgroups");
         List<Element> pairsfromdiffgroupsList = pairsfromdiffgroupsNode.elements();
+        int countNo = 0;
+
         for (Element ele : pairsfromdiffgroupsList){
             // get all elements of pairsfromdiffgroupsNode
             List<Element> elegroups = ele.elements();
@@ -68,6 +70,7 @@ public class ParseXML {
 
                     if (info.getName().equals("hasmr")){
                         if (info.getText().equals("No")){
+                            countNo++;
                             break;
                         }
                     }
@@ -103,6 +106,7 @@ public class ParseXML {
 
                     if (info.getName().equals("hasmr")){
                         if (info.getText().equals("No")){
+                            countNo++;
                             break;
                         }
                     }
@@ -118,10 +122,13 @@ public class ParseXML {
                         relations.add(info.getText());
                     }
                 }
-                testframeAndMr.add(str);
+                if (!(str.equals("") || str.equals("\n"))){
+                    testframeAndMr.add(str);
+                }
             }
         }
         System.out.println(relations);
+        System.out.println("不存在MR的条目有：" + String.valueOf(countNo));
     }
 
 
@@ -141,7 +148,7 @@ public class ParseXML {
     }
 
     public static void main(String[] args) {
-        ParseXML parseXML = new ParseXML("MOS");
+        ParseXML parseXML = new ParseXML("ACMS");
         parseXML.getAllRelations();
         parseXML.writeTestframeAndMr();
     }
