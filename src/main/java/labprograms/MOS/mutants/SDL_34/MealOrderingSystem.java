@@ -1,4 +1,4 @@
-package labprograms.MOS.mutants.SDL_34;
+package labprograms.MOS.mutants.SDL_34;// This is a mutant program.
 import labprograms.MOS.sourceCode.MSR;
 
 import java.util.Scanner;
@@ -23,7 +23,7 @@ public class MealOrderingSystem
 
     public MSR msr;
 
-    public  MSR generateMSR( java.lang.String aircraftmodel, java.lang.String changeinthenumberofcrewmembers, int newnumberofcrewmembers, java.lang.String changeinthenumberofpilots, int newnumberofpilots, int numberofchildpassengers, int numberofrequestedbundlesofflowers )
+    public  MSR generateMSR( String aircraftmodel, String changeinthenumberofcrewmembers, int newnumberofcrewmembers, String changeinthenumberofpilots, int newnumberofpilots, int numberofchildpassengers, int numberofrequestedbundlesofflowers )
     {
         this.msr = new MSR();
         if (aircraftmodel.equals( "747200" )) {
@@ -92,14 +92,14 @@ public class MealOrderingSystem
         return this.msr;
     }
 
-    public static  void main( java.lang.String[] args )
+    public static  void main( String[] args )
     {
-        java.util.Scanner s = new java.util.Scanner( System.in );
-        java.lang.String aircraftmodel = null;
+        Scanner s = new Scanner( System.in );
+        String aircraftmodel = null;
         System.out.println( "please enter aircraft model:\n" );
         aircraftmodel = s.next();
         System.out.println( "if there is a change in the number of crew members, enter\"y\". Otherwise, enter\"n\"\n" );
-        java.lang.String changeInTheNumberOfCrewMembers = s.next();
+        String changeInTheNumberOfCrewMembers = s.next();
         int numberofcrewmembers;
         if (changeInTheNumberOfCrewMembers.equals( "y" )) {
             System.out.println( "please enter new number of crew memebers:\n" );
@@ -108,7 +108,7 @@ public class MealOrderingSystem
             numberofcrewmembers = 0;
         }
         System.out.println( "if there is a change in the number of pilots, enter\"y\". Otherwise, enter\"n\"\n" );
-        java.lang.String changeInTheNumberOfPilots = s.next();
+        String changeInTheNumberOfPilots = s.next();
         int numberofpilots;
         if (changeInTheNumberOfPilots.equals( "y" )) {
             System.out.println( "please enter new number of crew memebers:\n" );

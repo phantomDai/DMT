@@ -38,7 +38,7 @@ public class Constant {
 
 
     /**the number of repeating times for testing*/
-    public static final int repeatNumber = 50;
+    public static final int repeatNumber = 100;
 
 
     /**the path of the file that includes the test frames and corresponding MRs for ACMS*/
@@ -54,6 +54,45 @@ public class Constant {
     public static final String killedmutantinfo = System.getProperty("user.dir") +
             separator + "src" + separator + "main" + separator + "java"
             + separator + "labprograms" + separator + "gethardkilledmutants";
+
+    /**the path of the file that includes the test frames and corresponding MRs for CUBS*/
+    public static final String mrPath4CUBS = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "mr" + separator + "CUBS";
+
+
+    /**the path of the file that includes the test frames and corresponding MRs for ERS*/
+    public static final String mrPath4ERS = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "mr" + separator + "ERS";
+
+    /**the path of the file that includes the test frames and corresponding MRs for MT4MOS*/
+    public static final String mrPath4MOS = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "mr" + separator + "MOS";
+
+    public static final String gethardkilledmutantsPath = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "gethardkilledmutants";
+
+    public static final int numberofMr4ACMS = 735;
+
+    public static final int numberofMr4CUBS = 142;
+
+    public static final int numberofMr4ERS = 1130;
+
+    public static final int numberofMr4MOS = 3512;
+
+
+    public static int getMutantsNumber(String objectName){
+        if (objectName.equals("ACMS"))
+            return 4;
+        else if (objectName.equals("CUBS"))
+            return 21;
+        else if (objectName.equals("ERS"))
+            return 1;
+        else
+            return 1;
+    }
+
+
+
 
 
 }

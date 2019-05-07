@@ -148,7 +148,7 @@ public class ParseXML {
     }
 
     public static void main(String[] args) {
-        ParseXML parseXML = new ParseXML("ACMS");
+        ParseXML parseXML = new ParseXML("MOS");
         parseXML.getAllRelations();
         parseXML.writeTestframeAndMr();
     }

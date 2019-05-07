@@ -1,4 +1,4 @@
-package labprograms.ERS.mutants.SDL_27;
+package labprograms.ERS.mutants.SDL_27;// This is a mutant program.
 // Author : ysma
 
 import java.util.Scanner;
@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class ExpenseReimbursementSystem
 {
 
-    private java.lang.String levelOfSalesStaff;
+    private String levelOfSalesStaff;
 
     private double allowableMileage;
 
     private double costPerKilometer;
 
-    public  double calculateReimbursementAmount( java.lang.String stafflevel, double actualmonthlymileage, double monthlysalesamount, double airfareamount, double otherexpensesamount )
+    public  double calculateReimbursementAmount( String stafflevel, double actualmonthlymileage, double monthlysalesamount, double airfareamount, double otherexpensesamount )
     {
         double feeForOverUseOfCar;
         double airfareReimbursement;
@@ -72,10 +72,10 @@ public class ExpenseReimbursementSystem
         return totalReimbursementAmount;
     }
 
-    public static  void main( java.lang.String[] args )
+    public static  void main( String[] args )
     {
-        java.util.Scanner s = new java.util.Scanner( System.in );
-        java.lang.String stafflevel = null;
+        Scanner s = new Scanner( System.in );
+        String stafflevel = null;
         System.out.println( "please enter stafflevel:" );
         stafflevel = s.next();
         System.out.println( "please enter actual monthly mileage:" );

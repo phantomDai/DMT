@@ -10,9 +10,7 @@ import lombok.ToString;
  * @author phantom
  * @date 2019/04/17
  */
-@Getter
-@Setter
-@ToString
+
 public class TestCase4ERS {
     private String stafflevel;
     private double actualmonthlymileage;
@@ -27,5 +25,46 @@ public class TestCase4ERS {
         setMonthlysalesamount(monthlysalesamount);
         setAirfareamount(airfareamount);
         setOtherexpensesamount(otherexpensesamount);
+    }
+
+
+    public String getStafflevel() {
+        return stafflevel;
+    }
+
+    public void setStafflevel(String stafflevel) {
+        this.stafflevel = stafflevel;
+    }
+
+    public double getActualmonthlymileage() {
+        return actualmonthlymileage;
+    }
+
+    public void setActualmonthlymileage(double actualmonthlymileage) {
+        this.actualmonthlymileage = actualmonthlymileage;
+    }
+
+    public double getMonthlysalesamount() {
+        return monthlysalesamount;
+    }
+
+    public void setMonthlysalesamount(double monthlysalesamount) {
+        this.monthlysalesamount = monthlysalesamount;
+    }
+
+    public double getAirfareamount() {
+        return airfareamount;
+    }
+
+    public void setAirfareamount(double airfareamount) {
+        this.airfareamount = airfareamount;
+    }
+
+    public double getOtherexpensesamount() {
+        return otherexpensesamount;
+    }
+
+    public void setOtherexpensesamount(double otherexpensesamount) {
+        this.otherexpensesamount = otherexpensesamount;
     }
 }

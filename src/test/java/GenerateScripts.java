@@ -53,7 +53,7 @@ public class GenerateScripts {
         stringBuffer.append("import java.util.Random;\n");
         stringBuffer.append("import labprograms.constant.Constant;\n");
         if (objectName.equals("MOS")){
-            stringBuffer.append("import labprograms.MOS.sourceCode.MSR;\n");
+            stringBuffer.append("import labprograms.MT4MOS.sourceCode.MSR;\n");
         }
 
         stringBuffer.append("public class " + mutantName + "Test extends TestCase{\n");
@@ -71,8 +71,8 @@ public class GenerateScripts {
                     "new labprograms.ERS.sourceCode.ExpenseReimbursementSystem();\n");
         }else {
             stringBuffer.append("\tprivate List<TestCase4MOS> testcases;\n");
-            stringBuffer.append("\tlabprograms.MOS.sourceCode.MealOrderingSystem source = " +
-                    "new labprograms.MOS.sourceCode.MealOrderingSystem();\n");
+            stringBuffer.append("\tlabprograms.MT4MOS.sourceCode.MealOrderingSystem source = " +
+                    "new labprograms.MT4MOS.sourceCode.MealOrderingSystem();\n");
         }
         stringBuffer.append("\tWriteTestingResult writeTestingResult = new WriteTestingResult();\n");
         stringBuffer.append("\t@Test\n");
@@ -111,7 +111,7 @@ public class GenerateScripts {
             stringBuffer.append("\t\tfor (TestCase4MOS tc : testcases) {\n" +
                     "\t\t\t MSR sourceResult = source.generateMSR(tc.getAircraftmodel(), tc.getChangeinthenumberofcrewmembers(), tc.getNewnumberofcrewmembers(), tc.getChangeinthenumberofpilots(), tc.getNewnumberofpilots(), " +
                     "tc.getNumberofchildpassengers(), tc.getNumberofrequestedbundlesofflowers());\n" +
-                    "\t\t\tlabprograms.MOS.mutants." + mutantName + ".MealOrderingSystem mutant = new labprograms.MOS.mutants." + mutantName + ".MealOrderingSystem();\n" +
+                    "\t\t\tlabprograms.MT4MOS.mutants." + mutantName + ".MealOrderingSystem mutant = new labprograms.MT4MOS.mutants." + mutantName + ".MealOrderingSystem();\n" +
                     "\t\t\tMSR mutantResult = mutant.generateMSR(tc.getAircraftmodel(), tc.getChangeinthenumberofcrewmembers(), tc.getNewnumberofcrewmembers(), tc.getChangeinthenumberofpilots(), tc.getNewnumberofpilots(), tc.getNumberofchildpassengers(), tc.getNumberofrequestedbundlesofflowers());\n" +
                     "\t\t\tif (sourceResult.numberOfBundlesOfFlowers == mutantResult.numberOfBundlesOfFlowers &&" +
                     "sourceResult.numberOfBusinessClassMeals == mutantResult.numberOfBusinessClassMeals &&" +
@@ -119,7 +119,7 @@ public class GenerateScripts {
                     "sourceResult.numberOfEconomicClassMeals == mutantResult.numberOfEconomicClassMeals &&" +
                     "sourceResult.numberOfFirstClassMeals == mutantResult.numberOfFirstClassMeals &&" +
                     "sourceResult.numberOfMealsForCrewMembers == mutantResult.numberOfMealsForCrewMembers &&" +
-                    "sourceResult.numberOfMealsForPilots == mutantResult.numberOfMealsForPilots){\n\t\t\t\tcontinue;\n\t\t\t}else {\n\t\t\t\tcount++;\n\t\t\t}\n\t\t}\n\t\twriteTestingResult.write(\"MOS\", mutantName,\" \",String.valueOf(count));\n\t}\n");
+                    "sourceResult.numberOfMealsForPilots == mutantResult.numberOfMealsForPilots){\n\t\t\t\tcontinue;\n\t\t\t}else {\n\t\t\t\tcount++;\n\t\t\t}\n\t\t}\n\t\twriteTestingResult.write(\"MT4MOS\", mutantName,\" \",String.valueOf(count));\n\t}\n");
         }
 
         stringBuffer.append("\tprivate void createTestCases(){\n\t\tConstant constant = new Constant();\n\t\tRandom random = new Random(0);\n");

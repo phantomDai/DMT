@@ -19,7 +19,7 @@ import static java.io.File.separator;
 
 /**
  * describe:
- *
+ * using traditional MT to choose the stubborn mutants
  * @author phantom
  * @date 2019/04/30
  */
@@ -32,10 +32,8 @@ public class MT4ACMS {
 
         for (Map.Entry<String, Mutant> entry : mutantMap.entrySet()){
             //逐个遍历每一个变异体
-
             List<Integer> indexs = new ArrayList<>();
             int counter = 0;
-
 
             Mutant mutant = entry.getValue();
             Object mutantInstance = null;
@@ -97,7 +95,7 @@ public class MT4ACMS {
                     indexs.add(lineNumber);
                 }
 
-                if (MR.equals("The output will increase") && sourceResult <= followUpResult){
+                if (MR.equals("The output will increase") && sourceResult >= followUpResult){
                     counter++;
                     indexs.add(lineNumber);
                 }
@@ -114,7 +112,7 @@ public class MT4ACMS {
      * @param testFrame that is used to generate test cases
      * @return a test case
      */
-    private TestCase4ACMS generateTestCase(String testFrame){
+    public TestCase4ACMS generateTestCase(String testFrame){
         int airClass = 0;
         int area = 0;
         boolean isStudent = true;
@@ -217,7 +215,10 @@ public class MT4ACMS {
     }
 
 
-
+    public static void main(String[] args) throws IllegalAccessException, IOException, InvocationTargetException {
+        MT4ACMS acms = new MT4ACMS();
+        acms.getKilledInfo();
+    }
 
 
 }

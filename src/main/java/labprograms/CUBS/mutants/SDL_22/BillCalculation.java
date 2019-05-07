@@ -1,4 +1,4 @@
-package labprograms.CUBS.mutants.SDL_22;
+package labprograms.CUBS.mutants.SDL_22;// This is a mutant program.
 // Author : ysma
 
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.IOException;
 public class BillCalculation
 {
 
-    private java.lang.String planType = "";
+    private String planType = "";
 
     private int planFee = 0;
 
@@ -29,7 +29,7 @@ public class BillCalculation
 
     private double bill = 0;
 
-    public  double phoneBillCalculation( java.lang.String planType, int planFee, int talkTime, int flow )
+    public  double phoneBillCalculation( String planType, int planFee, int talkTime, int flow )
     {
         if (planType == "A" || planType == "a") {
             switch (planFee) {
@@ -60,7 +60,7 @@ public class BillCalculation
                 break;
 
             default  :
-                new java.io.IOException( "Invalid planFee!" );
+                new IOException( "Invalid planFee!" );
 
             }
         } else {
@@ -91,11 +91,11 @@ public class BillCalculation
                     break;
 
                 default  :
-                    new java.io.IOException( "Invalid planFee" );
+                    new IOException( "Invalid planFee" );
 
                 }
             } else {
-                new java.io.IOException( "Invalid planType!" );
+                new IOException( "Invalid planType!" );
             }
         }
         if (talkTime < talkTimeBench) {
