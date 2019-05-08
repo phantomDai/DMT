@@ -10,6 +10,7 @@ import labprograms.testCase.TestCase4ERS;
 import labprograms.testCase.TestCase4MOS;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * describe: there are 4 strategies
@@ -19,6 +20,89 @@ import java.util.List;
  * @date 2019/05/07
  */
 public class DMT implements Strategy{
+
+    /**the test profile of RAPT*/
+    private double[] RAPT;
+
+    /**the test profile of MAPT*/
+    private double[][] MAPT;
+
+
+    /**
+     * initialize the test profile of RAPT
+     * @param numberOfPartitions the number of partitions
+     */
+    private void initializeRAPT(int numberOfPartitions){
+        RAPT = new double[numberOfPartitions];
+        for (int i = 0; i < RAPT.length; i++) {
+            RAPT[i] = 1.0 / numberOfPartitions;
+        }
+    }
+
+
+    /**
+     * initialize the test profile of RAPT
+     * @param numberOfPartitions the number of partitions
+     */
+    private void initializeMAPT(int numberOfPartitions){
+        MAPT = new double[numberOfPartitions][numberOfPartitions];
+        for (int i = 0; i < numberOfPartitions; i++) {
+            for (int j = 0; j < numberOfPartitions; j++) {
+                MAPT[i][j] = 1 / numberOfPartitions;
+            }
+        }
+    }
+
+
+    /**
+     * get a index of partition
+     * Note that the first number of partitions is 0
+     * @return the index
+     */
+    private int nextPartition4RAPT(){
+        int index = -1;
+        double randomNumber = new Random().nextDouble();
+        double sum = 0;
+        do {
+            index++;
+            sum += RAPT[index];
+        } while (randomNumber >= sum && index < RAPT.length);
+        return index;
+    }
+
+
+    /**
+     * get a index of partition
+     * Note that the first number of partitions is 0
+     * @return the index
+     */
+    private int nextPartition4MAPT(int formerPartitionNumber){
+        double[] tempArray = new double[MAPT.length];
+        for (int i = 0; i < tempArray.length; i++) {
+            tempArray[i] = MAPT[formerPartitionNumber][i];
+        }
+        int index = -1;
+        double randomNumber = new Random().nextDouble();
+        double sum = 0;
+        do {
+            index++;
+            sum += tempArray[index];
+        } while (randomNumber >= sum && index < tempArray.length);
+        return index;
+    }
+
+
+    private void adjustRAPT(int formerPartitionIndex, boolean isKilledMutant){
+        if (isKilledMutant){
+
+        }
+    }
+
+    private void adjustMAPT(int formerPartitionIndex, boolean isKilledMutans){
+
+    }
+
+
 
 
 
@@ -39,11 +123,6 @@ public class DMT implements Strategy{
             return tc;
         }
     }
-
-
-
-
-
 
 
     @Override
