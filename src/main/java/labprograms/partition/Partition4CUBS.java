@@ -31,22 +31,22 @@ public class Partition4CUBS {
                 String sourceTestFrame = tempStr.split(";")[0];
                 if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-3a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "CUBS" + separator
-                            + "1" + separator + tempStr;
+                            + "0" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 } else if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-3b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "CUBS" + separator
-                            + "2" + separator + tempStr;
+                            + "1" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 } else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-3a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "CUBS" + separator
-                            + "3" + separator + tempStr;
+                            + "2" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 } else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-3b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "CUBS" + separator
-                            + "4" + separator + tempStr;
+                            + "3" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 } else {

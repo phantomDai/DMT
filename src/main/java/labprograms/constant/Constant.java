@@ -26,19 +26,19 @@ public class Constant {
             separator + "src" + separator + "main" + separator + "java"
             + separator + "labprograms" + separator + "testingresult";
 
-    @Setter
+
     @Getter
     public String mrPath = System.getProperty("user.dir") + separator + "src" + separator
             + "main" + separator + "java" + separator + "labprograms" + separator + "mr";
 
-    @Setter
+
     @Getter
-    public String partitionPath = System.getProperty("user.dir") + separator + "src" + separator
+    public static final String partitionPath = System.getProperty("user.dir") + separator + "src" + separator
             + "main" + separator + "java" + separator + "labprograms" + separator + "partition";
 
 
     /**the number of repeating times for testing*/
-    public static final int repeatNumber = 100;
+    public static final int repeatNumber = 30;
 
 
     /**the path of the file that includes the test frames and corresponding MRs for ACMS*/
@@ -58,6 +58,9 @@ public class Constant {
     /**the path of the file that includes the test frames and corresponding MRs for CUBS*/
     public static final String mrPath4CUBS = System.getProperty("user.dir") + separator + "src" + separator
             + "main" + separator + "java" + separator + "labprograms" + separator + "mr" + separator + "CUBS";
+
+    public static final String mrDirPath = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "mr";
 
 
     /**the path of the file that includes the test frames and corresponding MRs for ERS*/
@@ -80,9 +83,24 @@ public class Constant {
     public static final int numberofMr4MOS = 3512;
 
 
+    public static final int K4ARTSUM = 10;
+
+
+    public static int getPartitionNumber(String objectName){
+        if (objectName.equals("ACMS"))
+            return 8;
+        else if (objectName.equals("CUBS"))
+            return 3;
+        else if (objectName.equals("ERS"))
+            return 12;
+        else
+            return 10;
+    }
+
+
     public static int getMutantsNumber(String objectName){
         if (objectName.equals("ACMS"))
-            return 4;
+            return 3;
         else if (objectName.equals("CUBS"))
             return 21;
         else if (objectName.equals("ERS"))

@@ -35,42 +35,42 @@ public class Partition4ACMS {
                 String sourceTestFrame = tempStr.split(";")[0];
                 if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-2a")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "1" + separator + tempStr;
+                            + "0" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 } else if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-2b")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "2" + separator + tempStr;
+                            + "1" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-2a")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "3" + separator + tempStr;
+                            + "2" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-2b")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "4" + separator + tempStr;
+                            + "3" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1c") && sourceTestFrame.contains("I-2a")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "5" + separator + tempStr;
+                            + "4" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1c") && sourceTestFrame.contains("I-2b")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "6" + separator + tempStr;
+                            + "5" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1d") && sourceTestFrame.contains("I-2a")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "7" + separator + tempStr;
+                            + "6" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else if (sourceTestFrame.contains("I-1d") && sourceTestFrame.contains("I-2b")){
                     String tempPath = new Constant().getPartitionPath() + separator + "ACMS" +separator
-                            + "8" + separator + tempStr;
+                            + "7" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     tempfile.mkdir();
                 }else {

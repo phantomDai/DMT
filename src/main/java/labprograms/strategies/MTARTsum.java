@@ -26,20 +26,23 @@ import java.util.*;
 
 /**
  * describe:
- * the method of selecting source test case: random
- * the method of selecting MR: random
+ * select source test case: ARTsum
+ * select MR: random
  * @author phantom
- * @date 2019/05/06
+ * @date 2019/05/13
  */
-public class MT implements Strategy{
+public class MTARTsum implements Strategy{
+
+    /**include the candidate test cases*/
+    private List<String> candidatesTestCases;
+
+    /**include the test cases that has been executed*/
+    private List<String> executeTestCases;
 
 
-    /**
-     * generate test case according to the test frame
-     * @param objectName SUT
-     * @param testframe the test frame
-     * @return a test case
-     */
+    private int[] S;
+
+
     @Override
     public Object getTestCase(String objectName, String testframe) {
         if (objectName.equals("ACMS")){
@@ -57,10 +60,434 @@ public class MT implements Strategy{
         }
     }
 
+    /**
+     * 每次重复执行测试需要调用该函数，来初始化S
+     * @param objectName 被测对象的名字
+     */
+    private void initializeS(String objectName, String sourceTestFrame){
+        if (objectName.equals("ACMS")){
+            S = new int[17];
+            if (sourceTestFrame.contains("I-1a")){
+                S[1] += 1;
+            } else if (sourceTestFrame.contains("I-1b")){
+                S[2] += 1;
+            }else if (sourceTestFrame.contains("I-1c")){
+                S[3] += 1;
+            }else if (sourceTestFrame.contains("I-1d")){
+                S[4] += 1;
+            }
+            if (sourceTestFrame.contains("I-2a")){
+                S[6] += 1;
+            }else if (sourceTestFrame.contains("I-2b")){
+                S[7] += 1;
+            }
+            if (sourceTestFrame.contains("I-3a")){
+                S[9] += 1;
+            }else if (sourceTestFrame.contains("I-3b")){
+                S[10] += 1;
+            }
+            if (sourceTestFrame.contains("I-4a")){
+                S[12] += 1;
+            }else if (sourceTestFrame.contains("I-4b")){
+                S[13] += 1;
+            }
+            if (sourceTestFrame.contains("I-5a")){
+                S[15] += 1;
+            }else if (sourceTestFrame.contains("I-5b")){
+                S[16] += 1;
+            }
+        }else if (objectName.equals("CUBS")){
+            S = new int[16];
+            if (sourceTestFrame.contains("I-1a")){
+                S[1] += 1;
+            }else if (sourceTestFrame.contains("I-1b")){
+                S[2] += 1;
+            }
+            if (sourceTestFrame.contains("I-2a")){
+                S[4] += 1;
+            }else if (sourceTestFrame.contains("I-2b")){
+                S[5] += 1;
+            }else if (sourceTestFrame.contains("I-2c")){
+                S[6] += 1;
+            }else if (sourceTestFrame.contains("I-2d")){
+                S[7] += 1;
+            }else if (sourceTestFrame.contains("I-2e")){
+                S[8] += 1;
+            }else if (sourceTestFrame.contains("I-2f")){
+                S[9] += 1;
+            }
+            if (sourceTestFrame.contains("I-3a")){
+                S[11] += 1;
+            }else if (sourceTestFrame.contains("I-3b")){
+                S[12] += 1;
+            }
+            if (sourceTestFrame.contains("I-4a")){
+                S[14] += 1;
+            }else if (sourceTestFrame.contains("I-4b")){
+                S[15] += 1;
+            }
+        }else if (objectName.equals("ERS")){
+            S = new int[19];
+            if (sourceTestFrame.contains("I-1a")){
+                S[1] += 1;
+            } else if (sourceTestFrame.contains("I-1b")){
+                S[2] += 1;
+            }else if (sourceTestFrame.contains("I-1c")){
+                S[3] += 1;
+            }
+            if (sourceTestFrame.contains("I-2a")){
+                S[5] += 1;
+            }else if (sourceTestFrame.contains("I-2b")){
+                S[6] += 1;
+            }else if (sourceTestFrame.contains("I-2c")){
+                S[7] += 1;
+            }
+            if (sourceTestFrame.contains("I-3a")){
+                S[9] += 1;
+            }else if (sourceTestFrame.contains("I-3b")){
+                S[10] += 1;
+            }else if (sourceTestFrame.contains("I-3c")){
+                S[11] += 1;
+            }else if (sourceTestFrame.contains("I-3d")){
+                S[12] += 1;
+            }
+            if (sourceTestFrame.contains("I-4a")){
+                S[14] += 1;
+            }else if (sourceTestFrame.contains("I-4b")){
+                S[15] += 1;
+            }
+            if (sourceTestFrame.contains("I-5a")){
+                S[17] += 1;
+            }else if (sourceTestFrame.contains("I-5b")){
+                S[18] += 1;
+            }
+        }else {
+            S = new int[26];
+            if (sourceTestFrame.contains("I-1a")){
+                S[1] += 1;
+            } else if (sourceTestFrame.contains("I-1b")){
+                S[2] += 1;
+            }else if (sourceTestFrame.contains("I-1c")){
+                S[3] += 1;
+            }else if (sourceTestFrame.contains("I-1d")){
+                S[4] += 1;
+            }else if (sourceTestFrame.contains("I-1e")){
+                S[5] += 1;
+            }
+            if (sourceTestFrame.contains("I-2a")){
+                S[7] += 1;
+            }else if (sourceTestFrame.contains("I-2b")){
+                S[8] += 1;
+            }
+            if (sourceTestFrame.contains("I-3a")){
+                S[10] += 1;
+            }else if (sourceTestFrame.contains("I-3b")){
+                S[11] += 1;
+            }else if (sourceTestFrame.contains("I-3c")){
+                S[12] += 1;
+            }
+            if (sourceTestFrame.contains("I-4a")){
+                S[14] += 1;
+            }else if (sourceTestFrame.contains("I-4b")){
+                S[15] += 1;
+            }
+            if (sourceTestFrame.contains("I-5a")){
+                S[17] += 1;
+            }else if (sourceTestFrame.contains("I-5b")){
+                S[18] += 1;
+            }else if (sourceTestFrame.contains("I-5c")){
+                S[19] += 1;
+            }
+            if (sourceTestFrame.contains("I-6a")){
+                S[21] += 1;
+            }else if (sourceTestFrame.contains("I-6b")){
+                S[22] += 1;
+            }
+            if (sourceTestFrame.contains("I-7a")){
+                S[24] += 1;
+            }else if (sourceTestFrame.contains("I-7b")){
+                S[25] += 1;
+            }
+        }
+    }
+
+    private String artGetSourceTestCase(String objectName){
+        String sourceTestCase = "";
+        int maxValue = 0;
+        int[] sourceChoiceArray;
+        int[] maxSourceChoiceArray;
+        if (objectName.equals("ACMS")){
+            maxSourceChoiceArray = new int[17];
+            for (String sourceTestFrame : candidatesTestCases){
+                String sourceFollowAndMr = sourceTestFrame;
+                sourceTestFrame = sourceTestFrame.split(";")[0];
+                sourceChoiceArray = new int[17];
+                int tempValue = 0;
+                if (sourceTestFrame.contains("I-1a")){
+                    sourceChoiceArray[1] = 1;
+                    tempValue += (executeTestCases.size() - S[1]);
+                } else if (sourceTestFrame.contains("I-1b")){
+                    sourceChoiceArray[2] = 1;
+                    tempValue += (executeTestCases.size() - S[2]);
+                }else if (sourceTestFrame.contains("I-1c")){
+                    sourceChoiceArray[3] = 1;
+                    tempValue += (executeTestCases.size() - S[3]);
+                }else if (sourceTestFrame.contains("I-1d")){
+                    sourceChoiceArray[4] = 1;
+                    tempValue += (executeTestCases.size() - S[4]);
+                }
+                if (sourceTestFrame.contains("I-2a")){
+                    sourceChoiceArray[6] = 1;
+                    tempValue += (executeTestCases.size() - S[5]);
+                }else if (sourceTestFrame.contains("I-2b")){
+                    sourceChoiceArray[7] = 1;
+                    tempValue += (executeTestCases.size() - S[7]);
+                }
+                if (sourceTestFrame.contains("I-3a")){
+                    sourceChoiceArray[9] = 1;
+                    tempValue += (executeTestCases.size() - S[9]);
+                }else if (sourceTestFrame.contains("I-3b")){
+                    sourceChoiceArray[10] = 1;
+                    tempValue += (executeTestCases.size() - S[10]);
+                }
+                if (sourceTestFrame.contains("I-4a")){
+                    sourceChoiceArray[12] = 1;
+                    tempValue += (executeTestCases.size() - S[12]);
+                }else if (sourceTestFrame.contains("I-4b")){
+                    sourceChoiceArray[13] = 1;
+                    tempValue += (executeTestCases.size() - S[13]);
+                }
+                if (sourceTestFrame.contains("I-5a")){
+                    sourceChoiceArray[15] = 1;
+                    tempValue += (executeTestCases.size() - S[15]);
+                }else if (sourceTestFrame.contains("I-5b")){
+                    sourceChoiceArray[16] = 1;
+                    tempValue += (executeTestCases.size() - S[16]);
+                }
+                if (tempValue > maxValue){
+                    maxValue = tempValue;
+                    sourceTestCase = sourceFollowAndMr;
+                    maxSourceChoiceArray = sourceChoiceArray;
+                }
+            }
+            for (int i = 0; i < S.length; i++) {
+                S[i] = S[i] + maxSourceChoiceArray[i];
+            }
+            executeTestCases.add(sourceTestCase);
+            return sourceTestCase;
+        }else if (objectName.equals("CUBS")){
+            maxSourceChoiceArray = new int[16];
+            for (String sourceTestFrame : candidatesTestCases){
+                String sourceFollowAndMr = sourceTestFrame;
+                sourceTestFrame = sourceTestFrame.split(";")[0];
+                sourceChoiceArray = new int[16];
+                int tempValue = 0;
+                if (sourceTestFrame.contains("I-1a")){
+                    sourceChoiceArray[1] = 1;
+                    tempValue += (executeTestCases.size() - S[1]);
+                } else if (sourceTestFrame.contains("I-1b")){
+                    sourceChoiceArray[2] = 1;
+                    tempValue += (executeTestCases.size() - S[2]);
+                }
+                if (sourceTestFrame.contains("I-2a")){
+                    sourceChoiceArray[4] = 1;
+                    tempValue += (executeTestCases.size() - S[4]);
+                }else if (sourceTestFrame.contains("I-2b")){
+                    sourceChoiceArray[5] = 1;
+                    tempValue += (executeTestCases.size() - S[5]);
+                }else if (sourceTestFrame.contains("I-2c")){
+                    sourceChoiceArray[6] = 1;
+                    tempValue += (executeTestCases.size() - S[6]);
+                }else if (sourceTestFrame.contains("I-2d")){
+                    sourceChoiceArray[7] = 1;
+                    tempValue += (executeTestCases.size() - S[7]);
+                }else if (sourceTestFrame.contains("I-2e")){
+                    sourceChoiceArray[8] = 1;
+                    tempValue += (executeTestCases.size() - S[8]);
+                }else if (sourceTestFrame.contains("I-2f")){
+                    sourceChoiceArray[9] = 1;
+                    tempValue += (executeTestCases.size() - S[9]);
+                }
+                if (sourceTestFrame.contains("I-3a")){
+                    sourceChoiceArray[11] = 1;
+                    tempValue += (executeTestCases.size() - S[11]);
+                }else if (sourceTestFrame.contains("I-3b")){
+                    sourceChoiceArray[12] = 1;
+                    tempValue += (executeTestCases.size() - S[12]);
+                }
+                if (sourceTestFrame.contains("I-4a")){
+                    sourceChoiceArray[14] = 1;
+                    tempValue += (executeTestCases.size() - S[14]);
+                }else if (sourceTestFrame.contains("I-4b")){
+                    sourceChoiceArray[15] = 1;
+                    tempValue += (executeTestCases.size() - S[15]);
+                }
+                if (tempValue > maxValue){
+                    maxValue = tempValue;
+                    sourceTestCase = sourceFollowAndMr;
+                    maxSourceChoiceArray = sourceChoiceArray;
+                }
+            }
+            for (int i = 0; i < S.length; i++) {
+                S[i] = S[i] + maxSourceChoiceArray[i];
+            }
+            executeTestCases.add(sourceTestCase);
+            return sourceTestCase;
+        }else if (objectName.equals("ERS")){
+            maxSourceChoiceArray = new int[19];
+            for (String sourceTestFrame : candidatesTestCases){
+                String sourceFollowAndMr = sourceTestFrame;
+                sourceTestFrame = sourceTestFrame.split(";")[0];
+                sourceChoiceArray = new int[19];
+                int tempValue = 0;
+                if (sourceTestFrame.contains("I-1a")){
+                    sourceChoiceArray[1] = 1;
+                    tempValue += (executeTestCases.size() - S[1]);
+                } else if (sourceTestFrame.contains("I-1b")){
+                    sourceChoiceArray[2] = 1;
+                    tempValue += (executeTestCases.size() - S[2]);
+                }else if (sourceTestFrame.contains("I-1c")){
+                    sourceChoiceArray[3] = 1;
+                    tempValue += (executeTestCases.size() - S[3]);
+                }
+                if (sourceTestFrame.contains("I-2a")){
+                    sourceChoiceArray[5] = 1;
+                    tempValue += (executeTestCases.size() - S[5]);
+                }else if (sourceTestFrame.contains("I-2b")){
+                    sourceChoiceArray[6] = 1;
+                    tempValue += (executeTestCases.size() - S[6]);
+                }else if (sourceTestFrame.contains("I-2c")){
+                    sourceChoiceArray[7] = 1;
+                    tempValue += (executeTestCases.size() - S[7]);
+                }
+                if (sourceTestFrame.contains("I-3a")){
+                    sourceChoiceArray[9] = 1;
+                    tempValue += (executeTestCases.size() - S[9]);
+                }else if (sourceTestFrame.contains("I-3b")){
+                    sourceChoiceArray[10] = 1;
+                    tempValue += (executeTestCases.size() - S[10]);
+                }else if (sourceTestFrame.contains("I-3c")){
+                    sourceChoiceArray[11] = 1;
+                    tempValue += (executeTestCases.size() - S[11]);
+                }else if (sourceTestFrame.contains("I-3d")){
+                    sourceChoiceArray[12] = 1;
+                    tempValue += (executeTestCases.size() - S[12]);
+                }
+                if (sourceTestFrame.contains("I-4a")){
+                    sourceChoiceArray[14] = 1;
+                    tempValue += (executeTestCases.size() - S[14]);
+                }else if (sourceTestFrame.contains("I-4b")){
+                    sourceChoiceArray[15] = 1;
+                    tempValue += (executeTestCases.size() - S[15]);
+                }
+                if (sourceTestFrame.contains("I-5a")){
+                    sourceChoiceArray[17] = 1;
+                    tempValue += (executeTestCases.size() - S[17]);
+                }else if (sourceTestFrame.contains("I-5b")){
+                    sourceChoiceArray[18] = 1;
+                    tempValue += (executeTestCases.size() - S[18]);
+                }
+                if (tempValue > maxValue){
+                    maxValue = tempValue;
+                    sourceTestCase = sourceFollowAndMr;
+                    maxSourceChoiceArray = sourceChoiceArray;
+                }
+            }
+            for (int i = 0; i < S.length; i++) {
+                S[i] = S[i] + maxSourceChoiceArray[i];
+            }
+            executeTestCases.add(sourceTestCase);
+            return sourceTestCase;
+        }else {
+            maxSourceChoiceArray = new int[26];
+            for (String sourceTestFrame : candidatesTestCases){
+                String sourceFollowAndMr = sourceTestFrame;
+                sourceTestFrame = sourceTestFrame.split(";")[0];
+                sourceChoiceArray = new int[26];
+                int tempValue = 0;
+                if (sourceTestFrame.contains("I-1a")){
+                    sourceChoiceArray[1] = 1;
+                    tempValue += (executeTestCases.size() - S[1]);
+                } else if (sourceTestFrame.contains("I-1b")){
+                    sourceChoiceArray[2] = 1;
+                    tempValue += (executeTestCases.size() - S[2]);
+                }else if (sourceTestFrame.contains("I-1c")){
+                    sourceChoiceArray[3] = 1;
+                    tempValue += (executeTestCases.size() - S[3]);
+                }else if (sourceTestFrame.contains("I-1d")){
+                    sourceChoiceArray[4] = 1;
+                    tempValue += (executeTestCases.size() - S[4]);
+                }else if (sourceTestFrame.contains("I-1e")){
+                    sourceChoiceArray[5] = 1;
+                    tempValue += (executeTestCases.size() - S[5]);
+                }
+                if (sourceTestFrame.contains("I-2a")){
+                    sourceChoiceArray[7] = 1;
+                    tempValue += (executeTestCases.size() - S[7]);
+                }else if (sourceTestFrame.contains("I-2b")){
+                    sourceChoiceArray[8] = 1;
+                    tempValue += (executeTestCases.size() - S[8]);
+                }
+                if (sourceTestFrame.contains("I-3a")){
+                    sourceChoiceArray[10] = 1;
+                    tempValue += (executeTestCases.size() - S[10]);
+                }else if (sourceTestFrame.contains("I-3b")){
+                    sourceChoiceArray[11] = 1;
+                    tempValue += (executeTestCases.size() - S[11]);
+                }else if (sourceTestFrame.contains("I-3c")){
+                    sourceChoiceArray[12] = 1;
+                    tempValue += (executeTestCases.size() - S[12]);
+                }
+                if (sourceTestFrame.contains("I-4a")){
+                    sourceChoiceArray[14] = 1;
+                    tempValue += (executeTestCases.size() - S[14]);
+                }else if (sourceTestFrame.contains("I-4b")){
+                    sourceChoiceArray[15] = 1;
+                    tempValue += (executeTestCases.size() - S[15]);
+                }
+                if (sourceTestFrame.contains("I-5a")){
+                    sourceChoiceArray[17] = 1;
+                    tempValue += (executeTestCases.size() - S[17]);
+                }else if (sourceTestFrame.contains("I-5b")){
+                    sourceChoiceArray[18] = 1;
+                    tempValue += (executeTestCases.size() - S[18]);
+                }else if (sourceTestFrame.contains("I-5c")){
+                    sourceChoiceArray[19] = 1;
+                    tempValue += (executeTestCases.size() - S[19]);
+                }
+                if (sourceTestFrame.contains("I-6a")){
+                    sourceChoiceArray[21] = 1;
+                    tempValue += (executeTestCases.size() - S[21]);
+                }else if (sourceTestFrame.contains("I-6b")){
+                    sourceChoiceArray[22] = 1;
+                    tempValue += (executeTestCases.size() - S[22]);
+                }
+                if (sourceTestFrame.contains("I-7a")){
+                    sourceChoiceArray[24] = 1;
+                    tempValue += (executeTestCases.size() - S[24]);
+                }else if (sourceTestFrame.contains("I-7b")){
+                    sourceChoiceArray[25] = 1;
+                    tempValue += (executeTestCases.size() - S[25]);
+                }
+                if (tempValue > maxValue){
+                    maxValue = tempValue;
+                    sourceTestCase = sourceFollowAndMr;
+                    maxSourceChoiceArray = sourceChoiceArray;
+                }
+
+            }
+            for (int i = 0; i < S.length; i++) {
+                S[i] = S[i] + maxSourceChoiceArray[i];
+            }
+            executeTestCases.add(sourceTestCase);
+            return sourceTestCase;
+        }
+    }
+
+
 
     @Override
     public void executeTestCase(String objectName) {
-
         //record all the time of selecting test cases for detecting the first fault
         List<Long> firstSelectTestCaseArray = new ArrayList<>();
 
@@ -82,7 +509,6 @@ public class MT implements Strategy{
         List<Integer> FmeasureArray = new ArrayList<>();
 
         List<Integer> TmeasureArray = new ArrayList<>();
-
         int numberOfMr = 0;
         String path = "";
         if (objectName.equals("ACMS")){
@@ -101,6 +527,7 @@ public class MT implements Strategy{
 
 
         BufferedReader bufferedReader = null;
+
         Map<String,String> mrInfo = new HashMap<>();
         try {
             bufferedReader = new BufferedReader(new FileReader(path));
@@ -117,8 +544,10 @@ public class MT implements Strategy{
         }
 
         for (int i = 0; i < Constant.repeatNumber; i++) {
-            System.out.println("MT4" + objectName + ":" + "执行第"+ String.valueOf(i + 1) + "次测试：" );
+            System.out.println("MT4" + objectName + "使用ART+RSMR:" + "执行第"+
+                    String.valueOf(i + 1) + "次测试：" );
 
+            executeTestCases = new ArrayList<>();
             UsedMutantsSet mutantsSet = new UsedMutantsSet(objectName);
             Map<String, Mutant> mutantMap = mutantsSet.getMutants();
             // the list that includes the killed mutants
@@ -147,28 +576,27 @@ public class MT implements Strategy{
             // the T-measure
             int Tmeasure = 0;
 
-
-
             for (int j = 0; j < 10000; j++) {
-                //get a test case
-                String testframesAndMr = "";
-                // the number of line (begin form 1)
-                int lineNumber = 0;
-
-                //select a test case
-                long startSelectTestCase = System.nanoTime();
-                int index = new Random().nextInt(numberOfMr) + 1;
-                // the number of executing test case add 1
                 counter++;
-//                int index = new Random().nextInt(1) + 374;
-                testframesAndMr = mrInfo.get(String.valueOf(index));
-
+                long startSelectTestCase = System.nanoTime();
+                candidatesTestCases = new ArrayList<>();
+                // generate 10 candidate test cases
+                for (int k = 0; k < Constant.K4ARTSUM; k++) {
+                    candidatesTestCases.add(mrInfo.get(String.valueOf(new Random().nextInt(numberOfMr) + 1)));
+                }
+                String testframesAndMr = "";
+                if (counter == 1){
+                    testframesAndMr = candidatesTestCases.get(new Random().nextInt(Constant.K4ARTSUM));
+                    executeTestCases.add(testframesAndMr);
+                    initializeS(objectName,testframesAndMr.split(";")[0]);
+                }else {
+                    testframesAndMr = artGetSourceTestCase(objectName);
+                }
                 long endSelectTestCase = System.nanoTime();
                 if (killedMutants.size() == 0){
                     firstSelectingTime += (endSelectTestCase - startSelectTestCase);
                 }
                 allSelectingTime += (endSelectTestCase - startSelectTestCase);
-
                 String MR = "";
                 if (!objectName.equals("MOS")){
                     MR = testframesAndMr.split(";")[2];
@@ -491,7 +919,6 @@ public class MT implements Strategy{
                         e.printStackTrace();
                     }
                 }//mutants
-
                 if (killedMutants.size() == Constant.getMutantsNumber(objectName)){
                     break;
                 }
@@ -508,7 +935,6 @@ public class MT implements Strategy{
             allgenerateTestCaseArray.add(allGeneratingTime);
             allExecuteTestCaseArray.add(allExecutingTime);
         }
-
         RecordResult.recordResult("MT4" + objectName, FmeasureArray, TmeasureArray,
                 firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
                 allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
@@ -516,9 +942,7 @@ public class MT implements Strategy{
                 getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
                 getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
                 getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
-
     }
-
 
     /**
      * calculate average time
@@ -545,11 +969,9 @@ public class MT implements Strategy{
 
 
     public static void main(String[] args) {
-        MT mt = new MT();
-//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"MOS"};
-        for (String name : names){
-            mt.executeTestCase(name);
-        }
+        MTARTsum mtarTsum = new MTARTsum();
+        mtarTsum.executeTestCase("ACMS");
     }
+
+
 }

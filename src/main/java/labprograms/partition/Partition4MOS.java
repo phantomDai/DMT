@@ -45,7 +45,7 @@ public class Partition4MOS {
 
                 if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-2a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "1" + separator + tempStr;
+                            + "0" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -54,7 +54,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-2b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "2" + separator + tempStr;
+                            + "1" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -63,7 +63,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-2a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "3" + separator + tempStr;
+                            + "2" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -72,7 +72,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1b") && sourceTestFrame.contains("I-2b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "4" + separator + tempStr;
+                            + "3" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -81,7 +81,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1c") && sourceTestFrame.contains("I-2a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "5" + separator + tempStr;
+                            + "4" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -90,7 +90,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1c") && sourceTestFrame.contains("I-2b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "6" + separator + tempStr;
+                            + "5" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -99,7 +99,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1d") && sourceTestFrame.contains("I-2a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "7" + separator + tempStr;
+                            + "6" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -108,7 +108,7 @@ public class Partition4MOS {
                     }
                 } else if (sourceTestFrame.contains("I-1d") && sourceTestFrame.contains("I-2b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "8" + separator + tempStr;
+                            + "7" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -117,7 +117,7 @@ public class Partition4MOS {
                     }
                 }else if (sourceTestFrame.contains("I-1e") && sourceTestFrame.contains("I-2a")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "9" + separator + tempStr;
+                            + "8" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");
@@ -126,7 +126,7 @@ public class Partition4MOS {
                     }
                 }else if (sourceTestFrame.contains("I-1e") && sourceTestFrame.contains("I-2b")) {
                     String tempPath = new Constant().getPartitionPath() + separator + "MOS" + separator
-                            + "10" + separator + tempStr;
+                            + "9" + separator + tempStr;
                     File tempfile = new File(tempPath);
                     if (tempfile.mkdir()){
                         System.out.println(tempPath + "创建成功");

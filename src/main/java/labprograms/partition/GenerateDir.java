@@ -17,7 +17,7 @@ public class GenerateDir {
     public void generateDir(String objectName){
         String path = new Constant().getPartitionPath() + separator + objectName;
         if (objectName.equals("ACMS")){
-            for (int i = 1; i < 9; i++) {
+            for (int i = 0; i < 8; i++) {
                 String tempPath = path + separator + String.valueOf(i);
                 File file = new File(tempPath);
                 if (!file.exists()){
@@ -25,7 +25,7 @@ public class GenerateDir {
                 }
             }
         }else if (objectName.equals("CUBS")){
-            for (int i = 1; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
                 String tempPath = path + separator + String.valueOf(i);
                 File file = new File(tempPath);
                 if (!file.exists()){
@@ -33,7 +33,7 @@ public class GenerateDir {
                 }
             }
         }else if (objectName.equals("ERS")){
-            for (int i = 1; i < 13; i++) {
+            for (int i = 0; i < 12; i++) {
                 String tempPath = path + separator + String.valueOf(i);
                 File file = new File(tempPath);
                 if (!file.exists()){
@@ -41,7 +41,7 @@ public class GenerateDir {
                 }
             }
         }else {
-            for (int i = 1; i < 13; i++) {
+            for (int i = 0; i < 12; i++) {
                 String tempPath = path + separator + String.valueOf(i);
                 File file = new File(tempPath);
                 if (!file.exists()){

@@ -59,6 +59,7 @@ public class TestCase4ACMS {
         stringBuffer.append("area =" + String.valueOf(getArea()) + " ");
         stringBuffer.append("luggage =" + String.valueOf(luggage) + " ");
         stringBuffer.append("economicfee =" + String.valueOf(economicfee) + " ");
+        stringBuffer.append("isStudent =" + String.valueOf(isStudent) + " ");
 
         return stringBuffer.toString();
     }
