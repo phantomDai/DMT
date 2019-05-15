@@ -78,9 +78,9 @@ public class GetPartitionFailure {
 
     public static void main(String[] args) {
         GetPartitionFailure getPartitionFailure = new GetPartitionFailure();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("partition" + String.valueOf(i) + ":");
-            getPartitionFailure.getPartitionFailureRate("MOS",String.valueOf(i));
+            getPartitionFailure.getPartitionFailureRate("CUBS",String.valueOf(i));
         }
 
     }

@@ -15,6 +15,6 @@ public class CalculateDelta {
     }
 
     public static void main(String[] args) {
-        CalculateDelta.calculate(0.159, 0.157);
+        CalculateDelta.calculate(0.25, 0.0278);
     }
 }

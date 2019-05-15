@@ -102,7 +102,7 @@ public class Constant {
         if (objectName.equals("ACMS"))
             return 3;
         else if (objectName.equals("CUBS"))
-            return 21;
+            return 1;
         else if (objectName.equals("ERS"))
             return 1;
         else

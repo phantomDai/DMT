@@ -10,6 +10,8 @@ import labprograms.method.Methods4Testing;
 import labprograms.mutants.Mutant;
 import labprograms.mutants.UsedMutantsSet;
 import labprograms.result.RecordResult;
+import labprograms.strategies.util.Control;
+import labprograms.strategies.util.TestCasesOfPartition;
 import labprograms.testCase.TestCase4ACMS;
 import labprograms.testCase.TestCase4CUBS;
 import labprograms.testCase.TestCase4ERS;
@@ -24,24 +26,208 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
 
+import static labprograms.strategies.util.CalculateAverage.getAverageTime;
+import static labprograms.strategies.util.CalculateAverage.getAveragemeasure;
+
 /**
  * describe:
- * the method of selecting source test case: random
- * the method of selecting MR: random
+ *
  * @author phantom
- * @date 2019/05/06
+ * @date 2019/05/14
  */
-public class MT implements Strategy{
+public class DMTwithRAPTandRT {
+    private static final int[] pun4ACMS = {79,73,67,60,96,84,29,23};
+    private static final int[] pun4CUBS = {50,5,43};
+    private static final int[] pun4ERS = {91,89,88,126,62,39,39,51,55,52,35,53};
+    private static final int[] pun4MOS = {390,298,403,261,403,217,226,84,132,21};
 
+
+    /**the test profile of RAPT*/
+    private double[] RAPT;
+
+    private double RAPT_epsilon = 0.05;
+
+    private double RAPT_delta;
+
+    /**the factor of reward*/
+    private int[] rew;
+
+    /**the factor of punishment*/
+    private int[] bou;
+
+    private int[] pun;
+
+    public void setRAPT_delta(double RAPT_delta) {
+        this.RAPT_delta = RAPT_delta;
+    }
+
+
+
+    public void setBou_RAPT(String objectName, int[] punArray){
+        if (objectName.equals("ACMS")){
+            rew = new int[8];
+            pun = new int[8];
+            bou = new int[8];
+            for (int i = 0; i < punArray.length; i++) {
+                bou[i] = punArray[i];
+            }
+        }else if(objectName.equals("CUBS")){
+            rew = new int[3];
+            pun = new int[3];
+            bou = new int[3];
+            for (int i = 0; i < punArray.length; i++) {
+                bou[i] = punArray[i];
+            }
+        }else if(objectName.equals("ERS")){
+            rew = new int[12];
+            pun = new int[12];
+            bou = new int[12];
+            for (int i = 0; i < punArray.length; i++) {
+                bou[i] = punArray[i];
+            }
+        }else {
+            rew = new int[10];
+            pun = new int[10];
+            bou = new int[10];
+            for (int i = 0; i < punArray.length; i++) {
+                bou[i] = punArray[i];
+            }
+        }
+
+    }
 
     /**
-     * generate test case according to the test frame
-     * @param objectName SUT
-     * @param testframe the test frame
-     * @return a test case
+     * initialize the test profile of RAPT
+     * @param numberOfPartitions the number of partitions
      */
-    @Override
-    public Object getTestCase(String objectName, String testframe) {
+    private void initializeRAPT(int numberOfPartitions){
+        RAPT = new double[numberOfPartitions];
+        for (int i = 0; i < RAPT.length; i++) {
+            RAPT[i] = 1.0 / numberOfPartitions;
+            pun[i] = 0;
+        }
+    }
+
+    /**
+     * get a index of partition
+     * Note that the first number of partitions is 0
+     * @return the index
+     */
+    private int nextPartition4RAPT(){
+        boolean flag = false;
+        int partitionindex = 0;
+        for (int i = 0; i < rew.length; i++) {
+            if (rew[i] > 0){
+                flag = true;
+                partitionindex = i;
+                break;
+            }
+        }
+        if (flag){
+            return partitionindex;
+        }else {
+            int index = -1;
+            double randomNumber = new Random().nextDouble();
+            double sum = 0;
+            do {
+                index++;
+                sum += RAPT[index];
+            } while (randomNumber >= sum && index < RAPT.length - 1);
+            return index;
+        }
+    }
+
+    /**
+     * adjust the test profile for RAPT testing
+     * @param
+     * @param isKilledMutant
+     */
+    private void adjustRAPT(int formersourcePartitionIndex,
+                            int formerfollowUpPartitionIndex,
+                            boolean isKilledMutant){
+        double old_i = RAPT[formersourcePartitionIndex];
+        double old_f = RAPT[formerfollowUpPartitionIndex];
+
+        if (formersourcePartitionIndex == formerfollowUpPartitionIndex){
+            if (isKilledMutant){
+                double sum = 0;
+                for (int i = 0; i < RAPT.length; i++) {
+                    if (i != formersourcePartitionIndex){
+                        RAPT[i] -= (1 + Math.log(rew[formersourcePartitionIndex]))
+                                * RAPT_epsilon / (RAPT.length - 1);
+                        if (RAPT[i] < 0){
+                            RAPT[i] = 0;
+                        }
+                    }
+                    sum += RAPT[i];
+                }
+                RAPT[formersourcePartitionIndex] = 1 - sum;
+            }else {
+                for (int i = 0; i < RAPT.length; i++) {
+                    if (i == formersourcePartitionIndex){
+                        if (old_i >= RAPT_delta){
+                            RAPT[i] -= RAPT_delta;
+                        }
+                        if (old_i < RAPT_delta || bou[i] == pun[i]){
+                            RAPT[i] = 0;
+                        }
+                    }else {
+                        if (old_i >= RAPT_delta){
+                            RAPT[i] += RAPT_delta / (RAPT.length - 1);
+                        }
+                        if (old_i < RAPT_delta || bou[i] == pun[i]){
+                            RAPT[i] += old_i / (RAPT.length - 1);
+                        }
+                    }
+                }
+            }
+        }else { // not belong to the same partition
+            if (isKilledMutant){
+                double sum = 0;
+                for (int i = 0; i < RAPT.length; i++) {
+                    if (i != formersourcePartitionIndex &&i != formerfollowUpPartitionIndex){
+                        if (RAPT[i] > (RAPT_epsilon *(1 + Math.log(rew[i])) / (RAPT.length - 2))){
+                            RAPT[i] -= RAPT_epsilon *(1 + Math.log(rew[i])) / (RAPT.length - 2);
+                        }else {
+                            RAPT[i] = 0;
+                        }
+                    }
+                    sum += RAPT[i];
+                }
+                RAPT[formersourcePartitionIndex] = old_i + ((1 - sum) - old_i - old_f) / 2;
+                RAPT[formerfollowUpPartitionIndex] = old_f + ((1 - sum) - old_f - old_i) / 2;
+            }else { // not reveal a mutant
+                if (old_i > RAPT_delta){
+                    RAPT[formersourcePartitionIndex] = old_i - RAPT_delta;
+                }
+                if (old_i <= RAPT_delta || pun[formersourcePartitionIndex] == bou[formersourcePartitionIndex]){
+                    RAPT[formersourcePartitionIndex] = 0;
+                    if(pun[formersourcePartitionIndex] == bou[formersourcePartitionIndex]){
+                        pun[formersourcePartitionIndex] = 0;
+                    }
+                }
+                if (old_f > RAPT_delta){
+                    RAPT[formerfollowUpPartitionIndex] = old_f - RAPT_delta;
+                }
+                if (old_f <= RAPT_delta || pun[formerfollowUpPartitionIndex] == bou[formerfollowUpPartitionIndex]){
+                    RAPT[formerfollowUpPartitionIndex] = 0;
+                    if(pun[formersourcePartitionIndex] == bou[formersourcePartitionIndex]){
+                        pun[formersourcePartitionIndex] = 0;
+                    }
+                }
+
+                for (int i = 0; i < RAPT.length; i++) {
+                    if (i != formersourcePartitionIndex && i != formerfollowUpPartitionIndex){
+                        RAPT[i] += (( old_i - RAPT[formersourcePartitionIndex]) +
+                                (old_f - RAPT[formerfollowUpPartitionIndex])) / (RAPT.length - 2);
+                    }
+                }
+            }
+        }
+
+    }
+
+    private Object getTestCase(String objectName, String testframe) {
         if (objectName.equals("ACMS")){
             TestCase4ACMS tc = new MT4ACMS().generateTestCase(testframe);
             return tc;
@@ -57,9 +243,26 @@ public class MT implements Strategy{
         }
     }
 
+    private void setParameters4RAPT(String objectName){
+        if (objectName.equals("ACMS")){
+            setRAPT_delta(0.01718312324929972);
+            setBou_RAPT(objectName,pun4ACMS);
+        }else if (objectName.equals("CUBS")){
+            setRAPT_delta(0.026004801920768313);
+            setBou_RAPT(objectName,pun4CUBS);
+        }else if (objectName.equals("ERS")){
+            setRAPT_delta(0.019839685749552596);
+            setBou_RAPT(objectName,pun4ERS);
+        }else {
+            setRAPT_delta(0.009424821887743086);
+            setBou_RAPT(objectName,pun4MOS);
+        }
+    }
 
-    @Override
-    public void executeTestCase(String objectName) {
+
+    public void RAPTwithRandomlySelectMR(String objectName){
+
+        TestCasesOfPartition testCasesOfPartition = new TestCasesOfPartition(objectName);
 
         //record all the time of selecting test cases for detecting the first fault
         List<Long> firstSelectTestCaseArray = new ArrayList<>();
@@ -83,6 +286,9 @@ public class MT implements Strategy{
 
         List<Integer> TmeasureArray = new ArrayList<>();
 
+        //实例化control类
+        Control control = new Control(objectName);
+
         int numberOfMr = 0;
         String path = "";
         if (objectName.equals("ACMS")){
@@ -101,6 +307,7 @@ public class MT implements Strategy{
 
 
         BufferedReader bufferedReader = null;
+
         Map<String,String> mrInfo = new HashMap<>();
         try {
             bufferedReader = new BufferedReader(new FileReader(path));
@@ -117,7 +324,10 @@ public class MT implements Strategy{
         }
 
         for (int i = 0; i < Constant.repeatNumber; i++) {
-            System.out.println("MT4" + objectName + ":" + "执行第"+ String.valueOf(i + 1) + "次测试：" );
+            setParameters4RAPT(objectName);
+            System.out.println("DMT4" + objectName + "使用RAPT+RT:" + "执行第"+ String.valueOf(i + 1) + "次测试：" );
+            //初始化测试剖面
+            initializeRAPT(Constant.getPartitionNumber(objectName));
 
             UsedMutantsSet mutantsSet = new UsedMutantsSet(objectName);
             Map<String, Mutant> mutantMap = mutantsSet.getMutants();
@@ -147,42 +357,51 @@ public class MT implements Strategy{
             // the T-measure
             int Tmeasure = 0;
 
-
-
             for (int j = 0; j < 10000; j++) {
                 //get a test case
                 String testframesAndMr = "";
-                // the number of line (begin form 1)
-                int lineNumber = 0;
-
-                //select a test case
-                long startSelectTestCase = System.nanoTime();
-                int index = new Random().nextInt(numberOfMr) + 1;
                 // the number of executing test case add 1
                 counter++;
-//                int index = new Random().nextInt(1) + 374;
-                testframesAndMr = mrInfo.get(String.valueOf(index));
+                String sourceTestFrame = "";
+                String followTestFrame = "";
+                String MR = "";
 
+                /**choose a partition and a source test case*/
+                long startSelectTestCase = System.nanoTime();
+                // choose a partition according to the test profile
+                int partitionIndex = nextPartition4RAPT();
+
+                //select a test case
+                testframesAndMr = testCasesOfPartition.
+                        getSourceFollowAndMR(partitionIndex);
                 long endSelectTestCase = System.nanoTime();
                 if (killedMutants.size() == 0){
                     firstSelectingTime += (endSelectTestCase - startSelectTestCase);
                 }
                 allSelectingTime += (endSelectTestCase - startSelectTestCase);
-
-                String MR = "";
+                /**get source test case, follow up test case, and MR*/
+                sourceTestFrame = testframesAndMr.split(";")[0];
+                followTestFrame = testframesAndMr.split(";")[1];
                 if (!objectName.equals("MOS")){
                     MR = testframesAndMr.split(";")[2];
                 }else {
+                    String tempStr = "";
                     for (int z = 2; z < testframesAndMr.split(";").length; z++) {
-                        MR += testframesAndMr.split(";")[z] + ";";
+                        tempStr += testframesAndMr.split(";")[z] + ";";
                     }
+                    MR = tempStr;
                     MR = MR.substring(0, MR.length() - 1);
-                    // delete the medel change in the MR
+
                     String[] choice = MR.split(";");
                     MR = choice[0] +";" + choice[1]+";" + choice[2]+";" + choice[3]+";"
                             + choice[5]+";" + choice[6]+";" + choice[7];
                 }
+
+                int partitionIndexOffollowTestCase = control.
+                        judgeThePartitionOfFollowTestFrame(objectName, followTestFrame);
+                boolean isKilledMutants = false;
                 for (Map.Entry<String, Mutant> entry : mutantMap.entrySet()){
+
                     if (killedMutants.contains(entry.getKey())){
                         continue;
                     }
@@ -201,8 +420,8 @@ public class MT implements Strategy{
                                     boolean.class, double.class, double.class);
                             // generate source test case and follow-up test case
                             long startGenerateTestCase = System.nanoTime();
-                            Object stc = getTestCase(objectName,testframesAndMr.split(";")[0]);
-                            Object ftc = getTestCase(objectName,testframesAndMr.split(";")[1]);
+                            Object stc = getTestCase(objectName,sourceTestFrame);
+                            Object ftc = getTestCase(objectName,followTestFrame);
                             TestCase4ACMS sourceTestCase = (TestCase4ACMS) stc;
                             TestCase4ACMS followUpTestCase = (TestCase4ACMS) ftc;
                             long endGenerateTestCase = System.nanoTime();
@@ -230,6 +449,7 @@ public class MT implements Strategy{
                             allExecutingTime += (endExecuteTestCase - startExecuteTestCase);
 
                             if (MR.equals("The output will not change") && sourceResult != followUpResult){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -240,6 +460,7 @@ public class MT implements Strategy{
                             }
 
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -254,8 +475,8 @@ public class MT implements Strategy{
                             mutantMethod = mutantClazz.getMethod(methodName, String.class, int.class,
                                     int.class, int.class);
                             long startGenerateTestCase = System.nanoTime();
-                            Object stc = getTestCase(objectName,testframesAndMr.split(";")[0]);
-                            Object ftc = getTestCase(objectName,testframesAndMr.split(";")[1]);
+                            Object stc = getTestCase(objectName,sourceTestFrame);
+                            Object ftc = getTestCase(objectName,followTestFrame);
                             TestCase4CUBS sourceTestCase = (TestCase4CUBS) stc;
                             TestCase4CUBS followUpTestCase = (TestCase4CUBS) ftc;
                             long endGenerateTestCase = System.nanoTime();
@@ -280,6 +501,7 @@ public class MT implements Strategy{
                             }
                             allExecutingTime += (endExecuteTestCase - startExecuteTestCase);
                             if (MR.equals("The output will not change") && sourceResult != followUpResult){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -290,6 +512,7 @@ public class MT implements Strategy{
                             }
 
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -300,6 +523,7 @@ public class MT implements Strategy{
                             }
 
                             if (MR.equals("The output will decrease") && sourceResult <= followUpResult){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -316,8 +540,8 @@ public class MT implements Strategy{
                             mutantMethod = mutantClazz.getMethod(methodName, String.class, double.class,
                                     double.class, double.class, double.class);
                             long startGenerateTestCase = System.nanoTime();
-                            Object stc = getTestCase(objectName,testframesAndMr.split(";")[0]);
-                            Object ftc = getTestCase(objectName,testframesAndMr.split(";")[1]);
+                            Object stc = getTestCase(objectName,sourceTestFrame);
+                            Object ftc = getTestCase(objectName,followTestFrame);
                             TestCase4ERS sourceTestCase = (TestCase4ERS) stc;
                             TestCase4ERS followUpTestCase = (TestCase4ERS) ftc;
                             long endGenerateTestCase = System.nanoTime();
@@ -342,6 +566,7 @@ public class MT implements Strategy{
                             }
                             allExecutingTime += (endExecuteTestCase - startExecuteTestCase);
                             if (MR.equals("The output will not change") && sourceResult != followUpResult) {
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -352,6 +577,7 @@ public class MT implements Strategy{
                             }
 
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult) {
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -362,6 +588,7 @@ public class MT implements Strategy{
                             }
 
                             if (MR.equals("The output will decrease") && sourceResult <= followUpResult) {
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -379,8 +606,8 @@ public class MT implements Strategy{
                                     String.class,int.class,int.class,int.class);
 
                             long startGenerateTestCase = System.nanoTime();
-                            Object stc = getTestCase(objectName,testframesAndMr.split(";")[0]);
-                            Object ftc = getTestCase(objectName,testframesAndMr.split(";")[1]);
+                            Object stc = getTestCase(objectName,sourceTestFrame);
+                            Object ftc = getTestCase(objectName,followTestFrame);
                             TestCase4MOS sourceTestCase = (TestCase4MOS) stc;
                             TestCase4MOS followUpTestCase = (TestCase4MOS) ftc;
                             long endGenerateTestCase = System.nanoTime();
@@ -468,6 +695,7 @@ public class MT implements Strategy{
                             }
 
                             if (!MR.equals(resultRelation)){
+                                isKilledMutants = true;
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
                                 }
@@ -491,7 +719,7 @@ public class MT implements Strategy{
                         e.printStackTrace();
                     }
                 }//mutants
-
+                adjustRAPT(partitionIndex,partitionIndexOffollowTestCase, isKilledMutants);
                 if (killedMutants.size() == Constant.getMutantsNumber(objectName)){
                     break;
                 }
@@ -509,47 +737,18 @@ public class MT implements Strategy{
             allExecuteTestCaseArray.add(allExecutingTime);
         }
 
-        RecordResult.recordResult("MT4" + objectName, FmeasureArray, TmeasureArray,
+        RecordResult.recordResult("DMTwithRAPT_RT4" + objectName, FmeasureArray, TmeasureArray,
                 firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
                 allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
                 getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
                 getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
                 getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
                 getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
-
-    }
-
-
-    /**
-     * calculate average time
-     * @param time the array of all time
-     * @return the average time
-     */
-    private double getAverageTime(List<Long> time){
-        long temp = 0;
-        for(long t : time){
-            temp += t;
-        }
-        double result = temp / time.size();
-        return result;
-    }
-
-    private double getAveragemeasure(List<Integer> time){
-        int temp = 0;
-        for(long t : time){
-            temp += t;
-        }
-        double result = temp / time.size();
-        return result;
     }
 
 
     public static void main(String[] args) {
-        MT mt = new MT();
-//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"CUBS"};
-        for (String name : names){
-            mt.executeTestCase(name);
-        }
+        DMTwithRAPTandRT dmTwithRAPTandRT = new DMTwithRAPTandRT();
+        dmTwithRAPTandRT.RAPTwithRandomlySelectMR("MOS");
     }
 }

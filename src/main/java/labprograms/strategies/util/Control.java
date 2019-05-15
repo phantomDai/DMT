@@ -29,6 +29,8 @@ public class Control {
     private Map<String, Set<String>> sourceTestCasePartition4MOS;
     private Map<String, String[]> sourcefollowMRPartition4MOS;
 
+    private Random random = new Random();
+
 
     public Control(String objectName) {
         this.objectName = objectName;
@@ -62,11 +64,9 @@ public class Control {
             sourceTestCasePartition4CUBS = new HashMap<>();
             sourcefollowMRPartition4CUBS = new HashMap<>();
             String path = Constant.partitionPath + separator + objectName;
-            File file = new File(path);
-            String[] partitionsName = file.list();
-            for (int i = 0; i < partitionsName.length; i++) {
+            for (int i = 0; i < Constant.getPartitionNumber(objectName); i++) {
                 Set<String> testframes = new HashSet<>();
-                String partitionPath = path + separator + partitionsName[i];
+                String partitionPath = path + separator + String.valueOf(i);
                 File tempFile = new File(partitionPath);
                 String[] fileNames = tempFile.list();
                 sourcefollowMRPartition4CUBS.put(String.valueOf(i), fileNames);
@@ -80,11 +80,9 @@ public class Control {
             sourceTestCasePartition4ERS = new HashMap<>();
             sourcefollowMRPartition4ERS = new HashMap<>();
             String path = Constant.partitionPath + separator + objectName;
-            File file = new File(path);
-            String[] partitionsName = file.list();
-            for (int i = 0; i < partitionsName.length; i++) {
+            for (int i = 0; i < Constant.getPartitionNumber(objectName); i++) {
                 Set<String> testframes = new HashSet<>();
-                String partitionPath = path + separator + partitionsName[i];
+                String partitionPath = path + separator + String.valueOf(i);
                 File tempFile = new File(partitionPath);
                 String[] fileNames = tempFile.list();
                 sourcefollowMRPartition4ERS.put(String.valueOf(i), fileNames);
@@ -136,15 +134,14 @@ public class Control {
         }
     }
 
-
     /**
-     * 随机方式选取一个MR
-     * @param indexOfPartition 选取的分区的编号
-     * @param sourceTestCase 选取的测试用例的编号
-     * @return 返回原始测试帧衍生测试帧以及对应的蜕变关系
+     * 获得一个MR根据程序的属性
+     * @return
      */
-    public String randomlyGetMR(int indexOfPartition, String sourceTestCase){
+    public String PBMRGetMR(int indexOfPartition, String sourceTestCase){
         List<String> candidates = new ArrayList<>();
+        List<String> bestCandidateList = new ArrayList<>();
+
         if (objectName.equals("ACMS")){
             String[] tempArray = sourcefollowMRPartition4ACMS.get(String.valueOf(indexOfPartition));
             for (String str : tempArray){
@@ -174,59 +171,25 @@ public class Control {
                 }
             }
         }
-        return candidates.get(new Random().nextInt(candidates.size()));
-    }
+//        bestCandidate = candidates.get(0);
+        bestCandidateList.add(candidates.get(0));
+        int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(candidates.get(0).split(";")[0],
+                candidates.get(0).split(";")[1]);
 
-
-    /**
-     * 获得一个MR根据程序的属性
-     * @return
-     */
-    public String PBMRGetMR(int indexOfPartition, String sourceTestCase){
-        List<String> candidates = new ArrayList<>();
-        String bestCandidate = "";
-        if (objectName.equals("ACMS")){
-            String[] tempArray = sourcefollowMRPartition4ACMS.get(String.valueOf(indexOfPartition));
-            for (String str : tempArray){
-                if (str.split(";")[0].contains(sourceTestCase)){
-                    candidates.add(str);
-                }
-            }
-        }else if (objectName.equals("CUBS")){
-            String[] tempArray = sourcefollowMRPartition4CUBS.get(indexOfPartition);
-            for (String str : tempArray){
-                if (str.split(";")[0].contains(sourceTestCase)){
-                    candidates.add(str);
-                }
-            }
-        }else if (objectName.equals("ERS")){
-            String[] tempArray = sourcefollowMRPartition4ERS.get(indexOfPartition);
-            for (String str : tempArray){
-                if (str.split(";")[0].contains(sourceTestCase)){
-                    candidates.add(str);
-                }
-            }
-        }else {
-            String[] tempArray = sourcefollowMRPartition4MOS.get(indexOfPartition);
-            for (String str : tempArray){
-                if (str.split(";")[0].contains(sourceTestCase)){
-                    candidates.add(str);
-                }
-            }
-        }
-        bestCandidate = candidates.get(0);
-        int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(bestCandidate.split(";")[0],
-                bestCandidate.split(";")[1]);
         for (int i = 1; i < candidates.size(); i++) {
             String tempSource = candidates.get(i).split(";")[0];
             String tempFollow = candidates.get(i).split(";")[1];
             int tempDA = compareSourceTestFrameAndFollowUpTestFrame(tempSource,tempFollow);
+            if (tempDA == MaxDA){
+                bestCandidateList.add(candidates.get(i));
+            }
             if (tempDA > MaxDA){
-                bestCandidate = candidates.get(i);
+                bestCandidateList.clear();
+                bestCandidateList.add(candidates.get(i));
                 MaxDA = tempDA;
             }
         }
-        return bestCandidate;
+        return bestCandidateList.get(random.nextInt(bestCandidateList.size()));
     }
 
 
@@ -265,6 +228,9 @@ public class Control {
             }
         }else {
             for (int i = 0; i < followChioces.length; i++) {
+                if ((sourceChioces[i].equals("#") || followChioces[i].equals("#"))){
+                    continue;
+                }
                 if (!sourceChioces[i].equals(followChioces[i])){
                     da++;
                 }
@@ -276,7 +242,8 @@ public class Control {
 
 
 
-    public int judgeThePartitionOfFollowTestFrame(String objectName, String followTestFrame){
+    public int judgeThePartitionOfFollowTestFrame(String objectName,
+                                                  String followTestFrame){
         String sourceTestFrame = followTestFrame;
         if (objectName.equals("ACMS")){
             if (sourceTestFrame.contains("I-1a") && sourceTestFrame.contains("I-2a")){
@@ -353,6 +320,13 @@ public class Control {
                 return 9;
             }
         }
+    }
+
+
+    public static void main(String[] args) {
+        Control control = new Control("ERS");
+        System.out.println(control.PBMRGetMR(8,
+                "{I-1c,#,I-3a,I-4a,#}"));
     }
 
 }

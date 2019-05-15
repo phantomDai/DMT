@@ -101,10 +101,9 @@ partition7 | 23
 
 partition | failure rate
 :-: | :-:
-partition0 | 0.167
-partition1 | 0.375
-partition2 | 0.161
-partition3 | 0(不存在测试用例)
+partition0 | 0.0278
+partition1 | 0.25
+partition2 | 0
 
 partition | punishment
 :-: | :-:
