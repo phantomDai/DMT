@@ -678,8 +678,14 @@ public class DMTwithMAPTandRT {
 
     public static void main(String[] args) {
         DMTwithMAPTandRT dmTwithMAPTandRT = new DMTwithMAPTandRT();
-        for (int i = 0; i < 20; i++) {
-            dmTwithMAPTandRT.MAPTwithRandomlySelectMR("MOS");
+        DMTwithRAPTandRT dmTwithRAPTandRT = new DMTwithRAPTandRT();
+//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
+        String[] names = {"ACMS"};
+        for (int i = 0; i < 100; i++) {
+            for (String name : names){
+                dmTwithMAPTandRT.MAPTwithRandomlySelectMR(name);
+                dmTwithRAPTandRT.RAPTwithRandomlySelectMR(name);
+            }
         }
 
     }

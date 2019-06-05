@@ -814,7 +814,7 @@ public class DMTwithRAPTandPB {
 
         for (int i = 0; i < Constant.repeatNumber; i++) {
             setParameters4RAPT(objectName);
-            System.out.println("DMT4" + objectName + "使用RAPT+RT:" + "执行第"+ String.valueOf(i + 1) + "次测试：" );
+            System.out.println("DMT4" + objectName + "使用RAPT+PB:" + "执行第"+ String.valueOf(i + 1) + "次测试：" );
             //初始化测试剖面
             initializeRAPT(Constant.getPartitionNumber(objectName));
 
@@ -1238,7 +1238,13 @@ public class DMTwithRAPTandPB {
 
     public static void main(String[] args) {
         DMTwithRAPTandPB dmTwithRAPTandPB = new DMTwithRAPTandPB();
-        dmTwithRAPTandPB.RAPTwithPBSelectMR("CUBS");
+//        String[] names = {"CUBS", "ERS", "MOS"};
+        String[] names = {"ERS"};
+        for (int i = 0; i < 20; i++) {
+            for (String name : names){
+                dmTwithRAPTandPB.RAPTwithPBSelectMR(name);
+            }
+        }
     }
 
 }

@@ -935,7 +935,7 @@ public class MTARTsum implements Strategy{
             allgenerateTestCaseArray.add(allGeneratingTime);
             allExecuteTestCaseArray.add(allExecutingTime);
         }
-        RecordResult.recordResult("MT4" + objectName, FmeasureArray, TmeasureArray,
+        RecordResult.recordResult("MTARTsum4" + objectName, FmeasureArray, TmeasureArray,
                 firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
                 allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
                 getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
@@ -970,7 +970,13 @@ public class MTARTsum implements Strategy{
 
     public static void main(String[] args) {
         MTARTsum mtarTsum = new MTARTsum();
-        mtarTsum.executeTestCase("ACMS");
+//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
+        String[] names = {"ACMS"};
+        for (int i = 0; i < 500; i++) {
+            for (String name : names){
+                mtarTsum.executeTestCase(name);
+            }
+        }
     }
 
 

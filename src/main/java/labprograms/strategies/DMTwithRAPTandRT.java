@@ -749,6 +749,11 @@ public class DMTwithRAPTandRT {
 
     public static void main(String[] args) {
         DMTwithRAPTandRT dmTwithRAPTandRT = new DMTwithRAPTandRT();
-        dmTwithRAPTandRT.RAPTwithRandomlySelectMR("MOS");
+        String[] names = {"ACMS"};
+        for (int i = 0; i < 200; i++) {
+            for (String name : names){
+                dmTwithRAPTandRT.RAPTwithRandomlySelectMR(name);
+            }
+        }
     }
 }

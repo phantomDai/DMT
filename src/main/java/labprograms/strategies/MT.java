@@ -546,10 +546,12 @@ public class MT implements Strategy{
 
     public static void main(String[] args) {
         MT mt = new MT();
-//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"CUBS"};
-        for (String name : names){
-            mt.executeTestCase(name);
+        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
+//        String[] names = {"CUBS"};
+        for (int i = 0; i < 20; i++) {
+            for (String name : names){
+                mt.executeTestCase(name);
+            }
         }
     }
 }

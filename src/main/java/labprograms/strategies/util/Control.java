@@ -141,7 +141,7 @@ public class Control {
     public String PBMRGetMR(int indexOfPartition, String sourceTestCase){
         List<String> candidates = new ArrayList<>();
         List<String> bestCandidateList = new ArrayList<>();
-
+        String bestCandidate = "";
         if (objectName.equals("ACMS")){
             String[] tempArray = sourcefollowMRPartition4ACMS.get(String.valueOf(indexOfPartition));
             for (String str : tempArray){
@@ -172,6 +172,22 @@ public class Control {
             }
         }
 //        bestCandidate = candidates.get(0);
+        if (objectName.equals("ACMS") || objectName.equals("ERS")){
+            bestCandidate = candidates.get(0);
+            int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(candidates.get(0).split(";")[0],
+                    candidates.get(0).split(";")[1]);
+
+            for (int i = 1; i < candidates.size(); i++) {
+                String tempSource = candidates.get(i).split(";")[0];
+                String tempFollow = candidates.get(i).split(";")[1];
+                int tempDA = compareSourceTestFrameAndFollowUpTestFrame(tempSource,tempFollow);
+                if (tempDA > MaxDA){
+                    bestCandidate = candidates.get(i);
+                    MaxDA = tempDA;
+                }
+            }
+            return bestCandidate;
+        }else {
         bestCandidateList.add(candidates.get(0));
         int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(candidates.get(0).split(";")[0],
                 candidates.get(0).split(";")[1]);
@@ -189,7 +205,7 @@ public class Control {
                 MaxDA = tempDA;
             }
         }
-        return bestCandidateList.get(random.nextInt(bestCandidateList.size()));
+        return bestCandidateList.get(random.nextInt(bestCandidateList.size()));}
     }
 
 

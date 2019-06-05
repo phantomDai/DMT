@@ -678,7 +678,13 @@ public class DMTwithMAPTandPB {
 
     public static void main(String[] args) {
         DMTwithMAPTandPB dmTwithMAPTandPB = new DMTwithMAPTandPB();
-        dmTwithMAPTandPB.MAPTwithPBSelectMR("CUBS");
+//        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
+        String[] names = {"ERS"};
+        for (int i = 0; i < 20; i++) {
+                for (String name : names){
+                dmTwithMAPTandPB.MAPTwithPBSelectMR(name);
+            }
+        }
     }
 
 
