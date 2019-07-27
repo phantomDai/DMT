@@ -98,6 +98,11 @@ public class Constant {
     }
 
 
+    /**
+     * 返回不同测试对象的变异体数目
+     * @param objectName 测试对象的名字：ACMS CUBS ERS MOS
+     * @return 变异体的数目
+     */
     public static int getMutantsNumber(String objectName){
         if (objectName.equals("ACMS"))
             return 3;

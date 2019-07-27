@@ -6,6 +6,7 @@ import labprograms.gethardkilledmutants.MT4ACMS;
 import labprograms.gethardkilledmutants.MT4CUBS;
 import labprograms.gethardkilledmutants.MT4ERS;
 import labprograms.gethardkilledmutants.MT4MOS;
+import labprograms.log.WriteDataToExcel;
 import labprograms.method.Methods4Testing;
 import labprograms.mutants.Mutant;
 import labprograms.mutants.UsedMutantsSet;
@@ -32,6 +33,59 @@ import java.util.*;
  * @date 2019/05/06
  */
 public class MT implements Strategy{
+    //记录Fn的实验结果
+    private List<List<Integer>> metrics = new ArrayList<>();
+    //记录Fn对应的测试用例选择、生成和执行的时间
+    private List<List<Long>> times = new ArrayList<>();
+
+
+    private void initializeMetrics(String objectName){
+        if (objectName.equals("ACMS")){
+            for (int i = 0; i < Constant.getMutantsNumber("ACMS"); i++) {
+                List<Integer> tempArray = new ArrayList<>();
+                List<Long> tempArray1 = new ArrayList<>();
+                List<Long> tempArray2 = new ArrayList<>();
+                List<Long> tempArray3 = new ArrayList<>();
+                times.add(tempArray1);
+                times.add(tempArray2);
+                times.add(tempArray3);
+                metrics.add(tempArray);
+            }
+        }else if (objectName.equals("CUBS")){
+            for (int i = 0; i < Constant.getMutantsNumber("CUBS"); i++) {
+                List<Integer> tempArray = new ArrayList<>();
+                List<Long> tempArray1 = new ArrayList<>();
+                List<Long> tempArray2 = new ArrayList<>();
+                List<Long> tempArray3 = new ArrayList<>();
+                times.add(tempArray1);
+                times.add(tempArray2);
+                times.add(tempArray3);
+                metrics.add(tempArray);
+            }
+        }else if (objectName.equals("ERS")){
+            for (int i = 0; i < Constant.getMutantsNumber("ERS"); i++) {
+                List<Integer> tempArray = new ArrayList<>();
+                List<Long> tempArray1 = new ArrayList<>();
+                List<Long> tempArray2 = new ArrayList<>();
+                List<Long> tempArray3 = new ArrayList<>();
+                times.add(tempArray1);
+                times.add(tempArray2);
+                times.add(tempArray3);
+                metrics.add(tempArray);
+            }
+        }else {
+            for (int i = 0; i < Constant.getMutantsNumber("MOS"); i++) {
+                List<Integer> tempArray = new ArrayList<>();
+                List<Long> tempArray1 = new ArrayList<>();
+                List<Long> tempArray2 = new ArrayList<>();
+                List<Long> tempArray3 = new ArrayList<>();
+                times.add(tempArray1);
+                times.add(tempArray2);
+                times.add(tempArray3);
+                metrics.add(tempArray);
+            }
+        }
+    }
 
 
     /**
@@ -59,16 +113,31 @@ public class MT implements Strategy{
 
 
     @Override
-    public void executeTestCase(String objectName) {
+    public void executeTestCase(String objectName, int in) {
+        //初始化Fn以及对应的时间的记录对象
+        initializeMetrics(objectName);
 
         //record all the time of selecting test cases for detecting the first fault
         List<Long> firstSelectTestCaseArray = new ArrayList<>();
+
+
 
         //record all the time of generate test cases for detecting the first fault
         List<Long> firstgenerateTestCaseArray = new ArrayList<>();
 
         //record all the time of execute test cases for detecting the first fault
         List<Long> firstExecuteTestCaseArray = new ArrayList<>();
+
+        //record all the time of selecting test cases for detecting the first fault
+        List<Long> secondSelectTestCaseArray = new ArrayList<>();
+
+
+
+        //record all the time of generate test cases for detecting the first fault
+        List<Long> secondgenerateTestCaseArray = new ArrayList<>();
+
+        //record all the time of execute test cases for detecting the first fault
+        List<Long> secondExecuteTestCaseArray = new ArrayList<>();
 
         //record all the time of selecting test cases for detecting all faults
         List<Long> allSelectTestCaseArray = new ArrayList<>();
@@ -80,6 +149,8 @@ public class MT implements Strategy{
         List<Long> allExecuteTestCaseArray = new ArrayList<>();
 
         List<Integer> FmeasureArray = new ArrayList<>();
+
+        List<Integer> F2measureArray = new ArrayList<>();
 
         List<Integer> TmeasureArray = new ArrayList<>();
 
@@ -135,6 +206,13 @@ public class MT implements Strategy{
             // the executing time of killing the first muatant
             long firstExecutingTime = 0;
 
+            // the selecting time of killing the first mutant
+            long secondSelectingTime = 0;
+            // the generating time of killing the first mutant
+            long secondGeneratingTime = 0;
+            // the executing time of killing the first muatant
+            long secondExecutingTime = 0;
+
             // the selecting time of killing all mutants
             long allSelectingTime = 0;
             // the generating time of killing all mutants
@@ -144,9 +222,10 @@ public class MT implements Strategy{
 
             // the F-measure
             int Fmeasure = 0;
+            // F2-measure
+            int F2measure = 0;
             // the T-measure
             int Tmeasure = 0;
-
 
 
             for (int j = 0; j < 10000; j++) {
@@ -166,6 +245,9 @@ public class MT implements Strategy{
                 long endSelectTestCase = System.nanoTime();
                 if (killedMutants.size() == 0){
                     firstSelectingTime += (endSelectTestCase - startSelectTestCase);
+                }
+                if (killedMutants.size() != 2){
+                    secondSelectingTime += (endSelectTestCase - startSelectTestCase);
                 }
                 allSelectingTime += (endSelectTestCase - startSelectTestCase);
 
@@ -209,8 +291,10 @@ public class MT implements Strategy{
                             if (killedMutants.size() == 0){
                                 firstGeneratingTime += (endGenerateTestCase - startGenerateTestCase);
                             }
+                            if (killedMutants.size() != 2){
+                                secondExecutingTime += (endGenerateTestCase - startGenerateTestCase);
+                            }
                             allGeneratingTime += (endGenerateTestCase - startGenerateTestCase);
-
 
                             //execute source test case and follow-up test case on all mutants
                             long startExecuteTestCase = System.nanoTime();
@@ -227,14 +311,33 @@ public class MT implements Strategy{
                             if (killedMutants.size() == 0){
                                 firstExecutingTime += (endExecuteTestCase - startExecuteTestCase);
                             }
+                            if (killedMutants.size() != 2){
+                                secondExecutingTime += (endExecuteTestCase - startExecuteTestCase);
+                            }
                             allExecutingTime += (endExecuteTestCase - startExecuteTestCase);
 
                             if (MR.equals("The output will not change") && sourceResult != followUpResult){
+                                //检测出第一个故障，记录此时的数据
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
+                                }
+                                if (killedMutants.size() == 1){
+                                    F2measure = counter;
+                                    metrics.get(1).add(counter);
+                                    times.get(3).add(secondSelectingTime);
+                                    times.get(4).add(secondGeneratingTime);
+                                    times.get(5).add(secondExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
+                                    metrics.get(2).add(counter);
+                                    times.get(6).add(allSelectingTime);
+                                    times.get(7).add(allGeneratingTime);
+                                    times.get(8).add(allExecutingTime);
                                 }
                                 killedMutants.add(entry.getKey());
                             }
@@ -242,9 +345,24 @@ public class MT implements Strategy{
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult){
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
+                                }
+                                if (killedMutants.size() == 1){
+                                    F2measure = counter;
+                                    metrics.get(1).add(counter);
+                                    times.get(3).add(secondSelectingTime);
+                                    times.get(4).add(secondGeneratingTime);
+                                    times.get(5).add(secondExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
+                                    metrics.get(2).add(counter);
+                                    times.get(6).add(allSelectingTime);
+                                    times.get(7).add(allGeneratingTime);
+                                    times.get(8).add(allExecutingTime);
                                 }
                                 killedMutants.add(entry.getKey());
                             }
@@ -282,6 +400,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will not change") && sourceResult != followUpResult){
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -292,6 +414,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult){
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -302,6 +428,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will decrease") && sourceResult <= followUpResult){
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -344,6 +474,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will not change") && sourceResult != followUpResult) {
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -354,6 +488,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will increase") && sourceResult >= followUpResult) {
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -364,6 +502,10 @@ public class MT implements Strategy{
                             if (MR.equals("The output will decrease") && sourceResult <= followUpResult) {
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
@@ -470,14 +612,16 @@ public class MT implements Strategy{
                             if (!MR.equals(resultRelation)){
                                 if (killedMutants.size() == 0){
                                     Fmeasure = counter;
+                                    metrics.get(0).add(counter);
+                                    times.get(0).add(firstSelectingTime);
+                                    times.get(1).add(firstGeneratingTime);
+                                    times.get(2).add(firstExecutingTime);
                                 }
                                 if (killedMutants.size() == Constant.getMutantsNumber(objectName) - 1){
                                     Tmeasure = counter;
                                 }
                                 killedMutants.add(entry.getKey());
                             }
-
-
                         }
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
@@ -498,12 +642,15 @@ public class MT implements Strategy{
             }
             FmeasureArray.add(Fmeasure);
             TmeasureArray.add(Tmeasure);
-
+            F2measureArray.add(F2measure);
 
             //add each time to array
             firstSelectTestCaseArray.add(firstSelectingTime);
             firstgenerateTestCaseArray.add(firstGeneratingTime);
             firstExecuteTestCaseArray.add(firstExecutingTime);
+            secondSelectTestCaseArray.add(secondSelectingTime);
+            secondgenerateTestCaseArray.add(secondGeneratingTime);
+            secondExecuteTestCaseArray.add(secondExecutingTime);
             allSelectTestCaseArray.add(allSelectingTime);
             allgenerateTestCaseArray.add(allGeneratingTime);
             allExecuteTestCaseArray.add(allExecutingTime);
@@ -515,10 +662,14 @@ public class MT implements Strategy{
                 getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
                 getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
                 getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
-                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
-
+                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray),in,
+                F2measureArray,secondSelectTestCaseArray,secondgenerateTestCaseArray,secondExecuteTestCaseArray,
+                getAveragemeasure(F2measureArray),getAverageTime(secondSelectTestCaseArray),getAverageTime(secondgenerateTestCaseArray),
+                getAverageTime(secondExecuteTestCaseArray));
+        String excelName = "MT4" + objectName + "index_" + String.valueOf(in);
+        WriteDataToExcel writeDataToExcel = new WriteDataToExcel();
+        writeDataToExcel.writeTestingInfoToExcel(excelName,metrics,times);
     }
-
 
     /**
      * calculate average time
@@ -547,10 +698,10 @@ public class MT implements Strategy{
     public static void main(String[] args) {
         MT mt = new MT();
 //        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"ERS"};
+        String[] names = {"ACMS"};
         for (int i = 0; i < 2000; i++) {
             for (String name : names){
-                mt.executeTestCase(name);
+                mt.executeTestCase(name,i);
             }
         }
     }
