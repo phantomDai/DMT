@@ -737,13 +737,7 @@ public class DMTwithRAPTandRT {
             allExecuteTestCaseArray.add(allExecutingTime);
         }
 
-        RecordResult.recordResult("DMTwithRAPT_RT4" + objectName, FmeasureArray, TmeasureArray,
-                firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
-                allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
-                getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
-                getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
-                getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
-                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
+
     }
 
 

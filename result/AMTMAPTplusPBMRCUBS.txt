@@ -1,0 +1,3 @@
+id-version: 47
+Fmeasure: 10.0
+F2measure: 5.0

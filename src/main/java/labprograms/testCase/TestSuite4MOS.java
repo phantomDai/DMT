@@ -15,14 +15,18 @@ import java.util.*;
  */
 public class TestSuite4MOS {
     /**the map that is convenient to transform to json */
-    @Getter
-    @Setter
     private Map<String, Object> testSuite;
 
     /**the list that is convenient to take out a test case*/
-    @Setter
-    @Getter
     private List<TestCase4MOS> testcases;
+
+    public Map<String, Object> getTestSuite() {
+        return testSuite;
+    }
+
+    public List<TestCase4MOS> getTestcases() {
+        return testcases;
+    }
 
     public TestSuite4MOS() {
         testcases = new ArrayList<>();

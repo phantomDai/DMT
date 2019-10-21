@@ -308,6 +308,7 @@ public class DMTwithMAPTandRT {
                     firstSelectingTime += (endSelectTestCase - startSelectTestCase);
                 }
                 allSelectingTime += (endSelectTestCase - startSelectTestCase);
+
                 /**get source test case, follow up test case, and MR*/
                 sourceTestFrame = testframesAndMr.split(";")[0];
                 followTestFrame = testframesAndMr.split(";")[1];
@@ -667,13 +668,7 @@ public class DMTwithMAPTandRT {
             allExecuteTestCaseArray.add(allExecutingTime);
         }
 
-        RecordResult.recordResult("DMTwithMAPT_RT4" + objectName, FmeasureArray, TmeasureArray,
-                firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
-                allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
-                getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
-                getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
-                getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
-                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
+
     }
 
     public static void main(String[] args) {

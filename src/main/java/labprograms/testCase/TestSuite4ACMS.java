@@ -19,15 +19,18 @@ import java.util.*;
 public class TestSuite4ACMS {
 
     /**the map that is convenient to transform to json */
-    @Getter
-    @Setter
     private Map<String, Object> testSuite;
 
     /**the list that is convenient to take out a test case*/
-    @Setter
-    @Getter
     private List<TestCase4ACMS> testcases;
 
+    public Map<String, Object> getTestSuite() {
+        return testSuite;
+    }
+
+    public List<TestCase4ACMS> getTestcases() {
+        return testcases;
+    }
 
     public TestSuite4ACMS(){
         testSuite = new HashMap<>();

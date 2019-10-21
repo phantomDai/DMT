@@ -1,0 +1,3 @@
+id-version: 42
+Fmeasure: 81.0
+F2measure: 101.0

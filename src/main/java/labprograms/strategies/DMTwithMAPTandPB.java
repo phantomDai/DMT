@@ -667,20 +667,14 @@ public class DMTwithMAPTandPB {
             allExecuteTestCaseArray.add(allExecutingTime);
         }
 
-        RecordResult.recordResult("DMTwithMAPT_PB4" + objectName, FmeasureArray, TmeasureArray,
-                firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
-                allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
-                getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
-                getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
-                getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
-                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
+
     }
 
     public static void main(String[] args) {
         DMTwithMAPTandPB dmTwithMAPTandPB = new DMTwithMAPTandPB();
 //        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"ERS"};
-        for (int i = 0; i < 20; i++) {
+        String[] names = {"ACMS"};
+        for (int i = 0; i < 2; i++) {
                 for (String name : names){
                 dmTwithMAPTandPB.MAPTwithPBSelectMR(name);
             }

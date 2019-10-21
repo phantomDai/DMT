@@ -487,7 +487,7 @@ public class MTARTsum implements Strategy{
 
 
     @Override
-    public void executeTestCase(String objectName) {
+    public void executeTestCase(String objectName, int in) {
         //record all the time of selecting test cases for detecting the first fault
         List<Long> firstSelectTestCaseArray = new ArrayList<>();
 
@@ -935,13 +935,7 @@ public class MTARTsum implements Strategy{
             allgenerateTestCaseArray.add(allGeneratingTime);
             allExecuteTestCaseArray.add(allExecutingTime);
         }
-        RecordResult.recordResult("MTARTsum4" + objectName, FmeasureArray, TmeasureArray,
-                firstSelectTestCaseArray, firstgenerateTestCaseArray,firstExecuteTestCaseArray,
-                allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray,
-                getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
-                getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
-                getAverageTime(firstExecuteTestCaseArray),getAverageTime(allSelectTestCaseArray),
-                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
+
     }
 
     /**
@@ -974,7 +968,7 @@ public class MTARTsum implements Strategy{
         String[] names = {"ACMS"};
         for (int i = 0; i < 500; i++) {
             for (String name : names){
-                mtarTsum.executeTestCase(name);
+                mtarTsum.executeTestCase(name, i);
             }
         }
     }

@@ -29,9 +29,6 @@ public class Control {
     private Map<String, Set<String>> sourceTestCasePartition4MOS;
     private Map<String, String[]> sourcefollowMRPartition4MOS;
 
-    private Random random = new Random();
-
-
     public Control(String objectName) {
         this.objectName = objectName;
         initializePartitions();
@@ -49,7 +46,7 @@ public class Control {
             String[] partitionsName = file.list();
             for (int i = 0; i < partitionsName.length; i++) {
                 Set<String> testframes = new HashSet<>();
-                String partitionPath = path + separator + partitionsName[i];
+                String partitionPath = path + separator + String.valueOf(i);
                 File tempFile = new File(partitionPath);
                 String[] fileNames = tempFile.list();
                 sourcefollowMRPartition4ACMS.put(String.valueOf(i), fileNames);
@@ -100,7 +97,7 @@ public class Control {
             String[] partitionsName = file.list();
             for (int i = 0; i < partitionsName.length; i++) {
                 Set<String> testframes = new HashSet<>();
-                String partitionPath = path + separator + partitionsName[i];
+                String partitionPath = path + separator + String.valueOf(i);
                 File tempFile = new File(partitionPath);
                 String[] fileNames = tempFile.list();
                 sourcefollowMRPartition4MOS.put(String.valueOf(i), fileNames);
@@ -172,7 +169,7 @@ public class Control {
             }
         }
 //        bestCandidate = candidates.get(0);
-        if (objectName.equals("ACMS") || objectName.equals("ERS")){
+        if (objectName.equals("ACMS")){
             bestCandidate = candidates.get(0);
             int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(candidates.get(0).split(";")[0],
                     candidates.get(0).split(";")[1]);
@@ -187,7 +184,10 @@ public class Control {
                 }
             }
             return bestCandidate;
-        }else {
+        }else if (objectName.equals("ERS")){
+            return candidates.get(new Random().nextInt(candidates.size()));
+        }
+        else {
         bestCandidateList.add(candidates.get(0));
         int MaxDA = compareSourceTestFrameAndFollowUpTestFrame(candidates.get(0).split(";")[0],
                 candidates.get(0).split(";")[1]);
@@ -205,7 +205,7 @@ public class Control {
                 MaxDA = tempDA;
             }
         }
-        return bestCandidateList.get(random.nextInt(bestCandidateList.size()));}
+        return bestCandidateList.get(new Random().nextInt(bestCandidateList.size()));}
     }
 
 

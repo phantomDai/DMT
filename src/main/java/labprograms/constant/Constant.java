@@ -23,16 +23,15 @@ public class Constant {
     public static final String cubssource = "labprograms.CUBS.sourceCode.BillCalculation";
 
     public static final String testingresultdir = System.getProperty("user.dir") +
-            separator + "src" + separator + "main" + separator + "java"
-            + separator + "labprograms" + separator + "testingresult";
+            separator + "results";
 
 
-    @Getter
     public String mrPath = System.getProperty("user.dir") + separator + "src" + separator
             + "main" + separator + "java" + separator + "labprograms" + separator + "mr";
 
+    public String staticMRPath = System.getProperty("user.dir") + separator + "src" + separator
+            + "main" + separator + "java" + separator + "labprograms" + separator + "mr" + separator + "staticMR";
 
-    @Getter
     public static final String partitionPath = System.getProperty("user.dir") + separator + "src" + separator
             + "main" + separator + "java" + separator + "labprograms" + separator + "partition";
 
@@ -105,9 +104,9 @@ public class Constant {
      */
     public static int getMutantsNumber(String objectName){
         if (objectName.equals("ACMS"))
-            return 3;
+            return 2;
         else if (objectName.equals("CUBS"))
-            return 1;
+            return 2;
         else if (objectName.equals("ERS"))
             return 1;
         else
@@ -115,7 +114,102 @@ public class Constant {
     }
 
 
+    public static int getNUmberOfMR(String objectName){
+        if (objectName.equals("ACMS"))
+            return 735;
+        else if (objectName.equals("CUBS"))
+            return 142;
+        else if (objectName.equals("ERS"))
+            return 1130;
+        else
+            return 3512;
+    }
 
+    public static int getNumber() {
+        return number;
+    }
 
+    public static String getAcmssource() {
+        return acmssource;
+    }
 
+    public static String getCubssource() {
+        return cubssource;
+    }
+
+    public static String getTestingresultdir() {
+        return testingresultdir;
+    }
+
+    public String getMrPath() {
+        return mrPath;
+    }
+
+    public String getStaticMRPath() {
+        return staticMRPath;
+    }
+
+    public static String getPartitionPath() {
+        return partitionPath;
+    }
+
+    public static int getRepeatNumber() {
+        return repeatNumber;
+    }
+
+    public static String getMrPath4ACMS() {
+        return mrPath4ACMS;
+    }
+
+    public static String getLogPath() {
+        return logPath;
+    }
+
+    public static String getResultPath() {
+        return resultPath;
+    }
+
+    public static String getKilledmutantinfo() {
+        return killedmutantinfo;
+    }
+
+    public static String getMrPath4CUBS() {
+        return mrPath4CUBS;
+    }
+
+    public static String getMrDirPath() {
+        return mrDirPath;
+    }
+
+    public static String getMrPath4ERS() {
+        return mrPath4ERS;
+    }
+
+    public static String getMrPath4MOS() {
+        return mrPath4MOS;
+    }
+
+    public static String getGethardkilledmutantsPath() {
+        return gethardkilledmutantsPath;
+    }
+
+    public static int getNumberofMr4ACMS() {
+        return numberofMr4ACMS;
+    }
+
+    public static int getNumberofMr4CUBS() {
+        return numberofMr4CUBS;
+    }
+
+    public static int getNumberofMr4ERS() {
+        return numberofMr4ERS;
+    }
+
+    public static int getNumberofMr4MOS() {
+        return numberofMr4MOS;
+    }
+
+    public static int getK4ARTSUM() {
+        return K4ARTSUM;
+    }
 }
