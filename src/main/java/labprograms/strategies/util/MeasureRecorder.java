@@ -86,7 +86,7 @@ public class MeasureRecorder {
 
     /**calculate variance**/
 
-    private double calculateVariance(List<Integer> list){
+    public double calculateVariance(List<Integer> list){
         //get average
         double average = calculateAverage(list);
 

@@ -6,10 +6,13 @@ import labprograms.gethardkilledmutants.MT4ACMS;
 import labprograms.gethardkilledmutants.MT4CUBS;
 import labprograms.gethardkilledmutants.MT4ERS;
 import labprograms.gethardkilledmutants.MT4MOS;
+import labprograms.log.ResultRecorder;
 import labprograms.method.Methods4Testing;
 import labprograms.mutants.Mutant;
 import labprograms.mutants.UsedMutantsSet;
 import labprograms.result.RecordResult;
+import labprograms.strategies.util.MeasureRecorder;
+import labprograms.strategies.util.TimeRecorder;
 import labprograms.testCase.TestCase4ACMS;
 import labprograms.testCase.TestCase4CUBS;
 import labprograms.testCase.TestCase4ERS;
@@ -238,7 +241,7 @@ public class MTARTsum implements Strategy{
                 }
                 if (sourceTestFrame.contains("I-2a")){
                     sourceChoiceArray[6] = 1;
-                    tempValue += (executeTestCases.size() - S[5]);
+                    tempValue += (executeTestCases.size() - S[6]);
                 }else if (sourceTestFrame.contains("I-2b")){
                     sourceChoiceArray[7] = 1;
                     tempValue += (executeTestCases.size() - S[7]);
@@ -486,6 +489,7 @@ public class MTARTsum implements Strategy{
 
 
 
+
     @Override
     public void executeTestCase(String objectName, int in) {
         //record all the time of selecting test cases for detecting the first fault
@@ -544,8 +548,8 @@ public class MTARTsum implements Strategy{
         }
 
         for (int i = 0; i < Constant.repeatNumber; i++) {
-            System.out.println("MT4" + objectName + "使用ART+RSMR:" + "执行第"+
-                    String.valueOf(i + 1) + "次测试：" );
+//            System.out.println("MT4" + objectName + "使用ART+RSMR:" + "执行第"+
+//                    String.valueOf(i + 1) + "次测试：" );
 
             executeTestCases = new ArrayList<>();
             UsedMutantsSet mutantsSet = new UsedMutantsSet(objectName);
@@ -576,6 +580,7 @@ public class MTARTsum implements Strategy{
             // the T-measure
             int Tmeasure = 0;
 
+            String testframesAndMr = "";
             for (int j = 0; j < 10000; j++) {
                 counter++;
                 long startSelectTestCase = System.nanoTime();
@@ -584,12 +589,15 @@ public class MTARTsum implements Strategy{
                 for (int k = 0; k < Constant.K4ARTSUM; k++) {
                     candidatesTestCases.add(mrInfo.get(String.valueOf(new Random().nextInt(numberOfMr) + 1)));
                 }
-                String testframesAndMr = "";
+
                 if (counter == 1){
-                    testframesAndMr = candidatesTestCases.get(new Random().nextInt(Constant.K4ARTSUM));
+//                    testframesAndMr = candidatesTestCases.get(new Random().nextInt(Constant.K4ARTSUM));
+                    testframesAndMr = mrInfo.get(String.valueOf(new Random().nextInt(numberOfMr) + 1));
                     executeTestCases.add(testframesAndMr);
                     initializeS(objectName,testframesAndMr.split(";")[0]);
                 }else {
+                    //在获得新的原始测试用例之前需要更新S
+
                     testframesAndMr = artGetSourceTestCase(objectName);
                 }
                 long endSelectTestCase = System.nanoTime();
@@ -935,6 +943,28 @@ public class MTARTsum implements Strategy{
             allgenerateTestCaseArray.add(allGeneratingTime);
             allExecuteTestCaseArray.add(allExecutingTime);
         }
+        //记录均值结果方便查看
+        String txtLogName = "MTARTplusRandom" + objectName + ".txt";
+        RecordResult.recordResult(txtLogName, in, getAveragemeasure(FmeasureArray),
+                                    getAveragemeasure(TmeasureArray));
+        //记录详细的实验结果
+        ResultRecorder resultRecorder = new ResultRecorder();
+        resultRecorder.initializeMeasureArray(FmeasureArray, TmeasureArray);
+        resultRecorder.initializeMeasureAverageAndVariance(getAveragemeasure(FmeasureArray), getAveragemeasure(TmeasureArray),
+                new MeasureRecorder().calculateVariance(FmeasureArray),new MeasureRecorder().calculateVariance(TmeasureArray));
+
+        resultRecorder.getTimeArray(firstSelectTestCaseArray, firstgenerateTestCaseArray, firstExecuteTestCaseArray,
+                allSelectTestCaseArray,allgenerateTestCaseArray,allExecuteTestCaseArray);
+
+        resultRecorder.getTimeAverage(getAverageTime(firstSelectTestCaseArray), getAverageTime(firstgenerateTestCaseArray),
+                getAverageTime(firstExecuteTestCaseArray), getAverageTime(allSelectTestCaseArray),
+                getAverageTime(allgenerateTestCaseArray), getAverageTime(allExecuteTestCaseArray));
+        TimeRecorder timeRecorder = new TimeRecorder();
+        resultRecorder.getTimeVariance(timeRecorder.getVarianceValue(firstSelectTestCaseArray), timeRecorder.getVarianceValue(firstgenerateTestCaseArray),
+                timeRecorder.getVarianceValue(firstExecuteTestCaseArray), timeRecorder.getVarianceValue(allSelectTestCaseArray),
+                timeRecorder.getVarianceValue(allgenerateTestCaseArray), timeRecorder.getVarianceValue(allExecuteTestCaseArray));
+        String excelLogName = "MTARTplusRandom" + objectName + ".xlsx";
+        resultRecorder.writeResult(excelLogName, in);
 
     }
 
@@ -965,8 +995,8 @@ public class MTARTsum implements Strategy{
     public static void main(String[] args) {
         MTARTsum mtarTsum = new MTARTsum();
 //        String[] names = {"ACMS", "CUBS", "ERS", "MOS"};
-        String[] names = {"ACMS"};
-        for (int i = 0; i < 500; i++) {
+        String[] names = {"MOS"};
+        for (int i = 0; i < 100; i++) {
             for (String name : names){
                 mtarTsum.executeTestCase(name, i);
             }

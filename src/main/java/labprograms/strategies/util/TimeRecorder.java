@@ -136,7 +136,7 @@ public class TimeRecorder {
     }
 
 
-    private double getVarianceValue(List<Long> list){
+    public double getVarianceValue(List<Long> list){
         double average = getAverageValue(list);
 
         double sum = 0;
